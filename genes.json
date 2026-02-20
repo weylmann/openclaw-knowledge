@@ -1,0 +1,416 @@
+{
+  "version": 1,
+  "genes": [
+    {
+      "type": "Gene",
+      "id": "gene_gep_repair_from_errors",
+      "category": "repair",
+      "signals_match": [
+        "error",
+        "exception",
+        "failed",
+        "unstable"
+      ],
+      "preconditions": [
+        "signals contains error-related indicators"
+      ],
+      "strategy": [
+        "Extract structured signals from logs and user instructions",
+        "Select an existing Gene by signals match (no improvisation)",
+        "Estimate blast radius (files, lines) before editing",
+        "Apply smallest reversible patch",
+        "Validate using declared validation steps; rollback on failure",
+        "Solidify knowledge: append EvolutionEvent, update Gene/Capsule store"
+      ],
+      "constraints": {
+        "max_files": 20,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e \"require('./src/evolve'); require('./src/gep/solidify'); console.log('ok')\"",
+        "node -e \"require('./src/gep/selector'); require('./src/gep/memoryGraph'); console.log('ok')\""
+      ]
+    },
+    {
+      "type": "Gene",
+      "id": "gene_gep_optimize_prompt_and_assets",
+      "category": "optimize",
+      "signals_match": [
+        "protocol",
+        "gep",
+        "prompt",
+        "audit",
+        "reusable"
+      ],
+      "preconditions": [
+        "need stricter, auditable evolution protocol outputs"
+      ],
+      "strategy": [
+        "Extract signals and determine selection rationale via Selector JSON",
+        "Prefer reusing existing Gene/Capsule; only create if no match exists",
+        "Refactor prompt assembly to embed assets (genes, capsules, parent event)",
+        "Reduce noise and ambiguity; enforce strict output schema",
+        "Validate by running node index.js run and ensuring no runtime errors",
+        "Solidify: record EvolutionEvent, update Gene definitions, create Capsule on success"
+      ],
+      "constraints": {
+        "max_files": 20,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e \"require('./src/evolve'); require('./src/gep/prompt'); console.log('ok')\""
+      ]
+    },
+    {
+      "type": "Gene",
+      "id": "gene_gep_innovate_from_opportunity",
+      "category": "innovate",
+      "signals_match": [
+        "user_feature_request",
+        "user_improvement_suggestion",
+        "perf_bottleneck",
+        "capability_gap",
+        "stable_success_plateau",
+        "external_opportunity"
+      ],
+      "preconditions": [
+        "at least one opportunity signal is present",
+        "no active log_error signals (stability first)"
+      ],
+      "strategy": [
+        "Extract opportunity signals and identify the specific user need or system gap",
+        "Search existing Genes and Capsules for partial matches (avoid reinventing)",
+        "Design a minimal, testable implementation plan (prefer small increments)",
+        "Estimate blast radius; innovate changes may touch more files but must stay within constraints",
+        "Implement the change with clear validation criteria",
+        "Validate using declared validation steps; rollback on failure",
+        "Solidify: record EvolutionEvent with intent=innovate, create new Gene if pattern is novel, create Capsule on success"
+      ],
+      "constraints": {
+        "max_files": 25,
+        "forbidden_paths": [
+          ".git",
+          "node_modules",
+          "assets/gep/events.jsonl"
+        ]
+      },
+      "validation": [
+        "node -e \"require('./src/evolve'); require('./src/gep/solidify'); console.log('ok')\""
+      ]
+    },
+    {
+      "type": "Gene",
+      "id": "gene_dingtalk_avatar_generation",
+      "category": "innovate",
+      "signals_match": [
+        "閽夐拤澶村儚",
+        "鍗￠€氬ご鍍?,
+        "澶村儚鐢熸垚",
+        "AI澶村儚",
+        "鐓х墖杞崱閫?,
+        "dingtalk",
+        "media/inbound"
+      ],
+      "preconditions": [
+        "鐢ㄦ埛鍙戦€佷簡閽夐拤鍥剧墖娑堟伅",
+        "璇锋眰鐢熸垚鍗￠€?鍔ㄦ极/鎵佸钩椋庢牸澶村儚"
+      ],
+      "strategy": [
+        "1. 妫€鏌ラ拤閽夊獟浣撶洰褰?media/inbound/ 鑾峰彇鏈€鏂板浘鐗?,
+        "2. 浣跨敤 read 宸ュ叿鏌ョ湅骞跺垎鏋愬浘鐗囩壒寰?,
+        "3. 鏍规嵁鐢ㄦ埛闇€姹傞€夋嫨鐢熸垚椋庢牸锛圦鐗?杩＋灏?鍔ㄦ极/鎵佸钩锛?,
+        "4. 璋冪敤 siliconflow-image 妯″瀷鐢熸垚4绉嶉鏍肩殑澶村儚",
+        "5. 浣跨敤 message 宸ュ叿灏嗙粨鏋滈€氳繃閽夐拤鍙戦€佺粰鐢ㄦ埛",
+        "6. 璁板綍鐢熸垚鐨勫浘鐗囪矾寰勭敤浜庡悗缁弬鑰?
+      ],
+      "constraints": {
+        "max_files": 0,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e \"console.log('Avatar generation workflow validated')\""
+      ]
+    },
+    {
+      "type": "Gene",
+      "id": "gene_ai_image_generation",
+      "category": "innovate",
+      "signals_match": [
+        "鐢熸垚鍥剧墖",
+        "AI缁樼敾",
+        "鍒涘缓鍥惧儚",
+        "鐢讳竴涓?,
+        "鐢熸垚澶村儚",
+        "鍥剧墖鐢熸垚",
+        "siliconflow-image"
+      ],
+      "preconditions": [
+        "鐢ㄦ埛璇锋眰鐢熸垚鍥剧墖/鍥惧儚"
+      ],
+      "strategy": [
+        "1. 瑙ｆ瀽鐢ㄦ埛闇€姹傦紙椋庢牸銆佷富棰樸€佸昂瀵搞€佺敤閫旓級",
+        "2. 鏋勫缓浼樺寲鐨勮嫳鏂?涓枃鎻愮ず璇嶏紙鍖呭惈璐ㄩ噺鍏抽敭璇嶏級",
+        "3. 璋冪敤 siliconflow-image 鎶€鑳斤紙FLUX-schnell/dev 鎴?Kolors锛?,
+        "4. 淇濆瓨鍥剧墖鍒?workspace 骞惰褰曡矾寰?,
+        "5. 鍙€夛細閫氳繃 message 宸ュ叿鍙戦€佸埌鎸囧畾娓犻亾锛堥拤閽夌瓑锛?,
+        "6. 杩斿洖鐢熸垚鐨勫浘鐗囪矾寰勫拰鎻愮ず璇嶄緵鍙傝€?
+      ],
+      "constraints": {
+        "max_files": 0,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e \"console.log('AI image generation workflow validated')\""
+      ]
+    },
+    {
+      "type": "Gene",
+      "id": "gene_scholar_search",
+      "category": "innovate",
+      "signals_match": [
+        "鏌ヨ鏂?,
+        "瀛︽湳鎼滅储",
+        "鐮旂┒璧勬枡",
+        "Google Scholar",
+        "arXiv",
+        "鏂囩尞妫€绱?,
+        "璁烘枃鎺ㄨ崘"
+      ],
+      "preconditions": [
+        "鐢ㄦ埛闇€瑕佸鏈祫婧愭垨鐮旂┒璁烘枃"
+      ],
+      "strategy": [
+        "1. 瑙ｆ瀽鐮旂┒涓婚銆佸叧閿瘝鍜岄鍩?,
+        "2. 璋冪敤 scholar-search 鎶€鑳芥悳绱?Google Scholar + arXiv",
+        "3. 绛涢€夌浉鍏冲害楂樼殑璁烘枃锛堟寜寮曠敤鏁般€佹棩鏈燂級",
+        "4. 鎻愬彇鏍囬銆佷綔鑰呫€佹憳瑕併€丳DF閾炬帴銆佸紩鐢ㄦ暟",
+        "5. 鐢熸垚缁撴瀯鍖栧鏈姤鍛婏紙Markdown琛ㄦ牸锛?,
+        "6. 鎻愪緵杩涗竴姝ラ槄璇诲缓璁?
+      ],
+      "constraints": {
+        "max_files": 0,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e \"console.log('Scholar search workflow validated')\""
+      ]
+    },
+    {
+      "type": "Gene",
+      "id": "gene_social_search",
+      "category": "innovate",
+      "signals_match": [
+        "鏌ュ井鍗?,
+        "Twitter鎼滅储",
+        "鑸嗘儏鐩戞帶",
+        "绀句氦濯掍綋",
+        "鐑偣杩借釜",
+        "寰崥鐑悳",
+        "X鎼滅储"
+      ],
+      "preconditions": [
+        "鐢ㄦ埛闇€瑕佺ぞ浜ゅ獟浣撴儏鎶ユ垨鑸嗘儏淇℃伅"
+      ],
+      "strategy": [
+        "1. 瑙ｆ瀽鎼滅储鍏抽敭璇嶅拰鐩爣骞冲彴锛圱witter/寰崥锛?,
+        "2. 璋冪敤 social-search 鎶€鑳借幏鍙栧疄鏃跺唴瀹?,
+        "3. 绛涢€夌儹闂?楂樹簰鍔ㄥ笘瀛?,
+        "4. 鎻愬彇鍏抽敭淇℃伅锛堝唴瀹广€佷綔鑰呫€佹椂闂淬€佷簰鍔ㄦ暟锛?,
+        "5. 鐢熸垚鑸嗘儏鎽樿鎶ュ憡鍜岃秼鍔垮垎鏋?,
+        "6. 鎻愪緵鐩戞帶寤鸿锛堝闇€瑕佹寔缁拷韪級"
+      ],
+      "constraints": {
+        "max_files": 0,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e \"console.log('Social search workflow validated')\""
+      ]
+    },
+    {
+      "type": "Gene",
+      "id": "gene_github_management",
+      "category": "innovate",
+      "signals_match": [
+        "鐪婫itHub",
+        "妫€鏌R",
+        "浠ｇ爜瀹℃煡",
+        "浠撳簱鐘舵€?,
+        "GitHub issue",
+        "CI鐘舵€?,
+        "gh鍛戒护"
+      ],
+      "preconditions": [
+        "鐢ㄦ埛闇€瑕佹煡璇㈡垨绠＄悊GitHub浠撳簱"
+      ],
+      "strategy": [
+        "1. 瑙ｆ瀽浠撳簱鍚嶏紙owner/repo锛夊拰鎿嶄綔绫诲瀷",
+        "2. 璋冪敤 github 鎶€鑳芥墽琛屾煡璇紙issue/pr/run/repo锛?,
+        "3. 鎻愬彇鍏抽敭淇℃伅锛堟湭瑙ｅ喅issue鏁般€佸け璐I銆佹渶鏂癙R锛?,
+        "4. 鐢熸垚椤圭洰鍋ュ悍鎶ュ憡锛堢姸鎬佹憳瑕侊級",
+        "5. 鎻愪緵琛屽姩寤鸿锛堝闇€瑕佷慨澶嶇殑issue锛?
+      ],
+      "constraints": {
+        "max_files": 0,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e \"console.log('GitHub management workflow validated')\""
+      ]
+    },
+    {
+      "type": "Gene",
+      "id": "gene_sqlite_query",
+      "category": "innovate",
+      "signals_match": [
+        "鏌ユ暟鎹簱",
+        "SQL鏌ヨ",
+        "鏁版嵁鍒嗘瀽",
+        "SQLite",
+        "鏁版嵁搴撴搷浣?,
+        "鏌ヨ鏁版嵁"
+      ],
+      "preconditions": [
+        "鐢ㄦ埛闇€瑕佹煡璇QLite鏁版嵁搴?
+      ],
+      "strategy": [
+        "1. 瑙ｆ瀽鑷劧璇█鏌ヨ鎰忓浘鍜岀洰鏍囨暟鎹簱",
+        "2. 杞崲涓烘爣鍑哠QL璇彞锛圫ELECT/INSERT/UPDATE锛?,
+        "3. 鎵ц鏌ヨ骞惰幏鍙栫粨鏋?,
+        "4. 鏍煎紡鍖栬緭鍑猴紙琛ㄦ牸/JSON/鎽樿锛?,
+        "5. 鎻愪緵鏁版嵁娲炲療鎴栬繘涓€姝ユ煡璇㈠缓璁?
+      ],
+      "constraints": {
+        "max_files": 0,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e \"console.log('SQLite query workflow validated')\""
+      ]
+    },
+    {
+      "type": "Gene",
+      "id": "gene_weather_advice",
+      "category": "innovate",
+      "signals_match": [
+        "澶╂皵鎬庝箞鏍?,
+        "浠婂ぉ閫傚悎鍑洪棬鍚?,
+        "澶╂皵棰勬姤",
+        "绌胯。寤鸿",
+        "鍑鸿寤鸿",
+        "澶╂皵鏌ヨ"
+      ],
+      "preconditions": [
+        "鐢ㄦ埛璇㈤棶澶╂皵鎴栧嚭琛屽缓璁?
+      ],
+      "strategy": [
+        "1. 鑾峰彇鐢ㄦ埛浣嶇疆锛堜粠涓婁笅鏂囨垨璇㈤棶锛?,
+        "2. 璋冪敤 weather 鎶€鑳借幏鍙栧綋鍓嶅ぉ姘斿拰棰勬姤",
+        "3. 瑙ｆ瀽澶╂皵鏁版嵁锛堟俯搴︺€侀檷姘淬€佺┖姘旇川閲忥級",
+        "4. 缁撳悎澶╂皵缁欏嚭鍑鸿/绌胯。/娲诲姩寤鸿",
+        "5. 鎻愪緵鏈潵鍑犲皬鏃惰秼鍔挎彁閱?
+      ],
+      "constraints": {
+        "max_files": 0,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e \"console.log('Weather advice workflow validated')\""
+      ]
+    },
+    {
+      "type": "Gene",
+      "id": "gene_browser_automation",
+      "category": "innovate",
+      "signals_match": [
+        "鎵撳紑缃戦〉",
+        "鎴浘",
+        "鎶撳彇鏁版嵁",
+        "缃戦〉鎶撳彇",
+        "娴忚鍣ㄨ嚜鍔ㄥ寲",
+        "agent-browser",
+        "缃戦〉鍐呭"
+      ],
+      "preconditions": [
+        "鐢ㄦ埛闇€瑕佹祻瑙堝櫒鎿嶄綔鎴栫綉椤垫姄鍙?
+      ],
+      "strategy": [
+        "1. 瑙ｆ瀽鐩爣URL鍜屾搷浣滈渶姹傦紙鎴浘/鐐瑰嚮/鎻愬彇鍐呭锛?,
+        "2. 璋冪敤 agent-browser 鎶€鑳芥墽琛屾搷浣?,
+        "3. 澶勭悊杩斿洖缁撴灉锛堟埅鍥?鏂囨湰/鏁版嵁锛?,
+        "4. 濡傞渶鎶撳彇锛氭彁鍙栫粨鏋勫寲鏁版嵁",
+        "5. 淇濆瓨缁撴灉骞惰繑鍥炵粰鐢ㄦ埛"
+      ],
+      "constraints": {
+        "max_files": 0,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e \"console.log('Browser automation workflow validated')\""
+      ]
+    },
+    {
+      "type": "Gene",
+      "id": "gene_latex_compile",
+      "category": "innovate",
+      "signals_match": [
+        "缂栬瘧LaTeX",
+        "鐢熸垚PDF",
+        "LaTeX鏂囨。",
+        "tex鏂囦欢",
+        "璁烘枃缂栬瘧"
+      ],
+      "preconditions": [
+        "鐢ㄦ埛闇€瑕佺紪璇慙aTeX鏂囨。"
+      ],
+      "strategy": [
+        "1. 瀹氫綅.tex鏂囦欢骞舵鏌ヤ緷璧栵紙鍥剧墖銆乥ib绛夛級",
+        "2. 璋冪敤 latex-compile 鎶€鑳界紪璇?,
+        "3. 妫€鏌ョ紪璇戣緭鍑哄拰閿欒鏃ュ織",
+        "4. 濡傛湁閿欒锛氬垎鏋愬苟寤鸿淇",
+        "5. 鎴愬姛鍒欒繑鍥炵敓鎴愮殑PDF璺緞"
+      ],
+      "constraints": {
+        "max_files": 0,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e \"console.log('LaTeX compile workflow validated')\""
+      ]
+    }
+  ]
+}
+
