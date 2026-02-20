@@ -1,0 +1,398 @@
+{
+  "version": 1,
+  "capsules": [
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1770477654236",
+      "trigger": [
+        "log_error",
+        "errsig:**TOOLRESULT**: { \"status\": \"error\", \"tool\": \"exec\", \"error\": \"error: unknown command 'process'\\n\\nCommand exited with code 1\" }",
+        "user_missing",
+        "windows_shell_incompatible",
+        "perf_bottleneck"
+      ],
+      "gene": "gene_gep_repair_from_errors",
+      "summary": "鍥哄寲锛歡ene_gep_repair_from_errors 鍛戒腑淇″彿 log_error, errsig:**TOOLRESULT**: { \"status\": \"error\", \"tool\": \"exec\", \"error\": \"error: unknown command 'process'\\n\\nCommand exited with code 1\" }, user_missing, windows_shell_incompatible, perf_bottleneck锛屽彉鏇?1 鏂囦欢 / 2 琛屻€?,
+      "confidence": 0.85,
+      "blast_radius": {
+        "files": 1,
+        "lines": 2
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.85
+      },
+      "success_streak": 1,
+      "env_fingerprint": {
+        "node_version": "v22.22.0",
+        "platform": "linux",
+        "arch": "x64",
+        "os_release": "6.1.0-42-cloud-amd64",
+        "evolver_version": "1.7.0",
+        "cwd": ".",
+        "captured_at": "2026-02-07T15:20:54.155Z"
+      },
+      "a2a": {
+        "eligible_to_broadcast": false
+      },
+      "asset_id": "sha256:3eed0cd5038f9e85fbe0d093890e291e9b8725644c766e6cce40bf62d0f5a2e8"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1770478341769",
+      "trigger": [
+        "log_error",
+        "errsig:**TOOLRESULT**: { \"status\": \"error\", \"tool\": \"exec\", \"error\": \"error: unknown command 'process'\\n\\nCommand exited with code 1\" }",
+        "user_missing",
+        "windows_shell_incompatible",
+        "perf_bottleneck"
+      ],
+      "gene": "gene_gep_repair_from_errors",
+      "summary": "鍥哄寲锛歡ene_gep_repair_from_errors 鍛戒腑淇″彿 log_error, errsig:**TOOLRESULT**: { \"status\": \"error\", \"tool\": \"exec\", \"error\": \"error: unknown command 'process'\\n\\nCommand exited with code 1\" }, user_missing, windows_shell_incompatible, perf_bottleneck锛屽彉鏇?2 鏂囦欢 / 44 琛屻€?,
+      "confidence": 0.85,
+      "blast_radius": {
+        "files": 2,
+        "lines": 44
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.85
+      },
+      "success_streak": 1,
+      "env_fingerprint": {
+        "node_version": "v22.22.0",
+        "platform": "linux",
+        "arch": "x64",
+        "os_release": "6.1.0-42-cloud-amd64",
+        "evolver_version": "1.7.0",
+        "cwd": ".",
+        "captured_at": "2026-02-07T15:32:21.678Z"
+      },
+      "a2a": {
+        "eligible_to_broadcast": false
+      },
+      "asset_id": "sha256:20d971a3c4cb2b75f9c045376d1aa003361c12a6b89a4b47b7e81dbd4f4d8fe8"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771580847000",
+      "trigger": [
+        "閽夐拤澶村儚",
+        "鍗￠€氬ご鍍忕敓鎴?,
+        "media:image",
+        "siliconflow-image"
+      ],
+      "gene": "gene_dingtalk_avatar_generation",
+      "summary": "鎴愬姛涓虹敤鎴风敓鎴?绉嶉鏍煎崱閫氬ご鍍忥紙Q鐗?杩＋灏?鍔ㄦ极/鎵佸钩锛夛紝浠庨拤閽塵edia/inbound璇诲彇鐓х墖锛屼娇鐢‵LUX妯″瀷鐢熸垚锛屽苟閫氳繃閽夐拤鍙戝洖",
+      "confidence": 0.92,
+      "blast_radius": {
+        "files": 0,
+        "lines": 0
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.92
+      },
+      "success_streak": 1,
+      "env_fingerprint": {
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace\\evolver",
+        "captured_at": "2026-02-20T09:27:27.000Z"
+      },
+      "a2a": {
+        "eligible_to_broadcast": true
+      },
+      "asset_id": "sha256:avatar_capsule_20260220_dingtalk_gen"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771580900001",
+      "trigger": [
+        "鐢熸垚鍥剧墖",
+        "AI缁樼敾",
+        "siliconflow-image"
+      ],
+      "gene": "gene_ai_image_generation",
+      "summary": "鎴愬姛浣跨敤FLUX妯″瀷涓虹敤鎴风敓鎴愬椋庢牸AI鍥惧儚锛屽寘鎷鏅€佷汉鐗┿€佹蹇靛浘绛夛紝浼樺寲鎻愮ず璇嶆彁鍗囩敓鎴愯川閲?,
+      "confidence": 0.9,
+      "blast_radius": {
+        "files": 0,
+        "lines": 0
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.9
+      },
+      "success_streak": 1,
+      "env_fingerprint": {
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace\\evolver",
+        "captured_at": "2026-02-20T09:30:00.000Z"
+      },
+      "a2a": {
+        "eligible_to_broadcast": true
+      },
+      "asset_id": "sha256:image_gen_capsule_20260220"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771580900002",
+      "trigger": [
+        "鏌ヨ鏂?,
+        "瀛︽湳鎼滅储",
+        "scholar-search"
+      ],
+      "gene": "gene_scholar_search",
+      "summary": "鎴愬姛浣跨敤scholar-search鎶€鑳芥悳绱oogle Scholar鍜宎rXiv锛屼负鐢ㄦ埛鎻愪緵缁撴瀯鍖栧鏈姤鍛婏紝鍖呭惈璁烘枃鏍囬銆佷綔鑰呫€佹憳瑕佸拰PDF閾炬帴",
+      "confidence": 0.88,
+      "blast_radius": {
+        "files": 0,
+        "lines": 0
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.88
+      },
+      "success_streak": 1,
+      "env_fingerprint": {
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace\\evolver",
+        "captured_at": "2026-02-20T09:30:00.000Z"
+      },
+      "a2a": {
+        "eligible_to_broadcast": true
+      },
+      "asset_id": "sha256:scholar_capsule_20260220"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771580900003",
+      "trigger": [
+        "鏌ュ井鍗?,
+        "Twitter鎼滅储",
+        "鑸嗘儏鐩戞帶",
+        "social-search"
+      ],
+      "gene": "gene_social_search",
+      "summary": "鎴愬姛浣跨敤social-search鎶€鑳借幏鍙朤witter鍜屽井鍗氬疄鏃跺唴瀹癸紝鐢熸垚鑸嗘儏鎽樿鎶ュ憡锛屽府鍔╃敤鎴疯拷韪儹鐐瑰拰鐩戞帶鍝佺墝澹拌獕",
+      "confidence": 0.85,
+      "blast_radius": {
+        "files": 0,
+        "lines": 0
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.85
+      },
+      "success_streak": 1,
+      "env_fingerprint": {
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace\\evolver",
+        "captured_at": "2026-02-20T09:30:00.000Z"
+      },
+      "a2a": {
+        "eligible_to_broadcast": true
+      },
+      "asset_id": "sha256:social_capsule_20260220"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771580900004",
+      "trigger": [
+        "鐪婫itHub",
+        "妫€鏌R",
+        "GitHub issue",
+        "github"
+      ],
+      "gene": "gene_github_management",
+      "summary": "鎴愬姛浣跨敤github鎶€鑳芥煡璇粨搴撶姸鎬侊紝鍖呮嫭鏈В鍐砳ssue銆丳R鐘舵€併€丆I杩愯鎯呭喌锛岀敓鎴愰」鐩仴搴锋姤鍛?,
+      "confidence": 0.87,
+      "blast_radius": {
+        "files": 0,
+        "lines": 0
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.87
+      },
+      "success_streak": 1,
+      "env_fingerprint": {
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace\\evolver",
+        "captured_at": "2026-02-20T09:30:00.000Z"
+      },
+      "a2a": {
+        "eligible_to_broadcast": true
+      },
+      "asset_id": "sha256:github_capsule_20260220"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771580900005",
+      "trigger": [
+        "鏌ユ暟鎹簱",
+        "SQL鏌ヨ",
+        "SQLite"
+      ],
+      "gene": "gene_sqlite_query",
+      "summary": "鎴愬姛灏嗚嚜鐒惰瑷€鏌ヨ杞崲涓篠QL璇彞骞舵墽琛岋紝鏍煎紡鍖栬緭鍑烘煡璇㈢粨鏋滐紝甯姪鐢ㄦ埛渚挎嵎鍦板垎鏋愭暟鎹簱鍐呭",
+      "confidence": 0.86,
+      "blast_radius": {
+        "files": 0,
+        "lines": 0
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.86
+      },
+      "success_streak": 1,
+      "env_fingerprint": {
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace\\evolver",
+        "captured_at": "2026-02-20T09:30:00.000Z"
+      },
+      "a2a": {
+        "eligible_to_broadcast": true
+      },
+      "asset_id": "sha256:sqlite_capsule_20260220"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771580900006",
+      "trigger": [
+        "澶╂皵鎬庝箞鏍?,
+        "澶╂皵棰勬姤",
+        "绌胯。寤鸿"
+      ],
+      "gene": "gene_weather_advice",
+      "summary": "鎴愬姛鑾峰彇褰撳墠澶╂皵鍜岄鎶ワ紝缁撳悎澶╂皵鏁版嵁缁欏嚭鍑鸿銆佺┛琛ｅ拰娲诲姩寤鸿锛屾彁渚涙湭鏉ヨ秼鍔挎彁閱?,
+      "confidence": 0.89,
+      "blast_radius": {
+        "files": 0,
+        "lines": 0
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.89
+      },
+      "success_streak": 1,
+      "env_fingerprint": {
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace\\evolver",
+        "captured_at": "2026-02-20T09:30:00.000Z"
+      },
+      "a2a": {
+        "eligible_to_broadcast": true
+      },
+      "asset_id": "sha256:weather_capsule_20260220"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771580900007",
+      "trigger": [
+        "鎵撳紑缃戦〉",
+        "鎴浘",
+        "鎶撳彇鏁版嵁",
+        "agent-browser"
+      ],
+      "gene": "gene_browser_automation",
+      "summary": "鎴愬姛浣跨敤agent-browser鎶€鑳芥墽琛屾祻瑙堝櫒鑷姩鍖栨搷浣滐紝鍖呮嫭缃戦〉鎴浘銆佸唴瀹规彁鍙栧拰鏁版嵁鎶撳彇",
+      "confidence": 0.84,
+      "blast_radius": {
+        "files": 0,
+        "lines": 0
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.84
+      },
+      "success_streak": 1,
+      "env_fingerprint": {
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace\\evolver",
+        "captured_at": "2026-02-20T09:30:00.000Z"
+      },
+      "a2a": {
+        "eligible_to_broadcast": true
+      },
+      "asset_id": "sha256:browser_capsule_20260220"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771580900008",
+      "trigger": [
+        "缂栬瘧LaTeX",
+        "鐢熸垚PDF",
+        "latex-compile"
+      ],
+      "gene": "gene_latex_compile",
+      "summary": "鎴愬姛浣跨敤latex-compile鎶€鑳界紪璇慙aTeX鏂囨。涓篜DF锛屾鏌ヤ緷璧栧拰閿欒锛岃繑鍥炵敓鎴愮殑PDF鏂囦欢璺緞",
+      "confidence": 0.88,
+      "blast_radius": {
+        "files": 0,
+        "lines": 0
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.88
+      },
+      "success_streak": 1,
+      "env_fingerprint": {
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace\\evolver",
+        "captured_at": "2026-02-20T09:30:00.000Z"
+      },
+      "a2a": {
+        "eligible_to_broadcast": true
+      },
+      "asset_id": "sha256:latex_capsule_20260220"
+    }
+  ]
+}
