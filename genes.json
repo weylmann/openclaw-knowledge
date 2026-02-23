@@ -1148,6 +1148,524 @@
         "source": "local"
       },
       "asset_id": "sha256:7d7c392cd8e6497ff67dc77a6541a5728c287c502b1d7ba6e7003e60db4521a1"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_cross_session_memory",
+      "category": "optimize",
+      "signals_match": [
+        "session_amnesia",
+        "context_loss",
+        "cross_session_gap",
+        "忘记之前的对话",
+        "记忆连续性",
+        "长期记忆",
+        "会话记忆"
+      ],
+      "preconditions": [
+        "新会话启动",
+        "用户提到之前的对话内容",
+        "检测到上下文丢失"
+      ],
+      "strategy": [
+        "1. 会话启动时自动加载 MEMORY.md (长期记忆)",
+        "2. 加载 memory/YYYY-MM-DD.md (最近 7 天的日记)",
+        "3. 加载 memory/RECENT_EVENTS.md (24 小时滚动事件)",
+        "4. 检查会话历史中是否有重要上下文",
+        "5. 将关键信息合并到当前会话上下文",
+        "6. 会话结束前自动保存重要事件到记忆文件",
+        "7. 定期整理和压缩旧记忆"
+      ],
+      "constraints": {
+        "max_files": 10,
+        "forbidden_paths": [
+          ".git",
+          "node_modules",
+          "sensitive"
+        ],
+        "memory_priority": "user_explicit_mentions > recent_events > long_term_memory"
+      },
+      "validation": [
+        "node -e \"console.log(1)\"",
+        "test -f MEMORY.md || echo \"MEMORY.md not required\""
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "local",
+        "promoted_at": "2026-02-23T08:47:31.292Z"
+      },
+      "summary": "跨会话记忆连续性管理，自动加载和保存重要上下文",
+      "schema_version": "1.5.0",
+      "asset_id": "sha256:324eca4a26bf952a2151c471c5036e6f42175ba5d1a32defcdd89b034b4cdad6"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_memory_consolidation",
+      "category": "optimize",
+      "signals_match": [
+        "memory_cleanup",
+        "记忆整理",
+        "压缩记忆",
+        "归档旧记忆",
+        "memory_optimization"
+      ],
+      "preconditions": [
+        "记忆文件过大 (>1MB)",
+        "距离上次整理超过 7 天",
+        "用户要求整理记忆"
+      ],
+      "strategy": [
+        "1. 扫描 memory/目录下所有文件",
+        "2. 识别超过 30 天的旧记忆",
+        "3. 提取关键事件和决策",
+        "4. 合并到 MEMORY.md 的相应分类",
+        "5. 归档旧文件到 memory/archive/YYYY-MM/",
+        "6. 更新记忆索引文件",
+        "7. 生成整理报告"
+      ],
+      "constraints": {
+        "max_files": 50,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "preserve_days": 30
+      },
+      "validation": [
+        "node -e \"console.log(1)\""
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "local",
+        "promoted_at": "2026-02-23T08:47:31.293Z"
+      },
+      "summary": "定期整理和压缩记忆文件，保持记忆系统高效",
+      "schema_version": "1.5.0",
+      "asset_id": "sha256:91411d97e277fc47ef57787adf1872be65acd6d984b8a9af965fcb22b9223cdb"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_context_awareness",
+      "category": "innovate",
+      "signals_match": [
+        "context_switch",
+        "话题切换",
+        "切换任务",
+        "回到之前的话题",
+        "context_recall"
+      ],
+      "preconditions": [
+        "用户切换话题",
+        "检测到上下文不连续",
+        "用户提到\"刚才\"或\"之前\""
+      ],
+      "strategy": [
+        "1. 维护话题栈 (topic stack)",
+        "2. 检测话题切换信号",
+        "3. 保存当前话题的上下文快照",
+        "4. 加载目标话题的历史上下文",
+        "5. 提供话题切换的平滑过渡",
+        "6. 支持\"回到刚才的话题\"命令",
+        "7. 自动清理过期的话题快照"
+      ],
+      "constraints": {
+        "max_files": 5,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "max_topic_stack": 10,
+        "snapshot_ttl_hours": 24
+      },
+      "validation": [
+        "node -e \"console.log(1)\""
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "local",
+        "promoted_at": "2026-02-23T08:47:31.293Z"
+      },
+      "summary": "智能上下文感知和话题切换管理",
+      "schema_version": "1.5.0",
+      "asset_id": "sha256:5a910c8e960e741c9124fcbbe7dbc448af5ac3601522aae939815bbb89823c48"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_memory_search",
+      "category": "innovate",
+      "signals_match": [
+        "搜索记忆",
+        "我记得",
+        "之前提到过",
+        "查找历史记录",
+        "memory search",
+        "recall"
+      ],
+      "preconditions": [
+        "用户要求搜索记忆",
+        "用户提到\"我记得...\"或\"之前...\""
+      ],
+      "strategy": [
+        "1. 解析用户的搜索查询",
+        "2. 在 MEMORY.md 中进行语义搜索",
+        "3. 搜索 memory/*.md 日记文件",
+        "4. 搜索会话历史记录",
+        "5. 按相关性和时间排序结果",
+        "6. 返回最相关的记忆片段",
+        "7. 提供引用来源 (文件 + 行号)"
+      ],
+      "constraints": {
+        "max_files": 20,
+        "forbidden_paths": [
+          ".git",
+          "node_modules",
+          "sensitive"
+        ],
+        "max_results": 10,
+        "min_relevance_score": 0.6
+      },
+      "validation": [
+        "node -e \"console.log(1)\""
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "local",
+        "promoted_at": "2026-02-23T08:47:31.293Z"
+      },
+      "summary": "在记忆文件中搜索相关内容，支持语义搜索",
+      "schema_version": "1.5.0",
+      "asset_id": "sha256:bf048552a3379e0ed7d42c392b51a31bd712c2ce961f4e3c961e8cc251e8a5ae"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_auto_memory_extraction",
+      "category": "innovate",
+      "signals_match": [
+        "记住这个",
+        "important",
+        "记下来",
+        "add to memory",
+        "save this",
+        "关键信息",
+        "重要决策",
+        "长期记住"
+      ],
+      "preconditions": [
+        "用户明确要求记住某事",
+        "检测到重要信息 (决策/偏好/承诺)",
+        "对话中包含关键事实"
+      ],
+      "strategy": [
+        "1. 实时监控对话内容",
+        "2. 识别记忆提取信号和重要信息",
+        "3. 提取关键实体 (人名/日期/决策/偏好)",
+        "4. 生成结构化的记忆条目",
+        "5. 自动追加到 memory/YYYY-MM-DD.md",
+        "6. 如果非常重要，同时更新 MEMORY.md",
+        "7. 向用户确认已保存的记忆内容",
+        "8. 生成记忆 ID 便于后续检索"
+      ],
+      "constraints": {
+        "max_files": 5,
+        "forbidden_paths": [
+          ".git",
+          "node_modules",
+          "sensitive"
+        ],
+        "auto_save_threshold": 0.7,
+        "require_confirmation": false
+      },
+      "validation": [
+        "node -e \"console.log(1)\"",
+        "test -d memory || mkdir memory"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "local",
+        "promoted_at": "2026-02-23T09:19:56.847Z"
+      },
+      "summary": "自动从对话中提取重要信息并保存到记忆系统",
+      "schema_version": "1.5.0",
+      "asset_id": "sha256:60e6fdf46d343663cd820225420e84c87ae91c76896a9339ebb1e4c9eb8d16a3"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_memory_association",
+      "category": "innovate",
+      "signals_match": [
+        "关联记忆",
+        "related to",
+        "连接到",
+        "link memory",
+        "这个和之前",
+        "memory connection",
+        "联想"
+      ],
+      "preconditions": [
+        "用户提到两个相关的事物",
+        "检测到记忆间的潜在关联",
+        "新信息与现有记忆相关"
+      ],
+      "strategy": [
+        "1. 分析当前对话中的实体和概念",
+        "2. 在现有记忆中搜索相关内容",
+        "3. 识别潜在的语义关联",
+        "4. 建立记忆间的双向链接",
+        "5. 更新记忆条目的 tags 和 related 字段",
+        "6. 生成记忆关联图谱数据",
+        "7. 向用户展示关联的记忆网络"
+      ],
+      "constraints": {
+        "max_files": 20,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "max_associations": 10,
+        "min_similarity_score": 0.6
+      },
+      "validation": [
+        "node -e \"console.log(1)\""
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "local",
+        "promoted_at": "2026-02-23T09:19:56.848Z"
+      },
+      "summary": "建立记忆间的语义关联，形成知识网络",
+      "schema_version": "1.5.0",
+      "asset_id": "sha256:647ad6744accb5820eb31fa3d3a0e25e1313b21df0ae23698c28b3d1a08e24e2"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_memory_priority_score",
+      "category": "optimize",
+      "signals_match": [
+        "记忆优先级",
+        "memory priority",
+        "重要程度",
+        "importance score",
+        "记忆权重",
+        "memorability"
+      ],
+      "preconditions": [
+        "需要评估记忆的重要性",
+        "记忆文件需要整理优化",
+        "用户询问某事的重要性"
+      ],
+      "strategy": [
+        "1. 分析记忆条目的多个维度:",
+        "   - 用户明确标记的重要性",
+        "   - 访问频率和复用次数",
+        "   - 时间衰减因子 (新鲜度)",
+        "   - 关联的记忆数量",
+        "   - 情感强度 (兴奋/紧急/承诺)",
+        "2. 计算综合优先级分数 (0-100)",
+        "3. 标记高优先级记忆 (>80)",
+        "4. 建议归档低优先级记忆 (<30)",
+        "5. 优化记忆检索排序"
+      ],
+      "constraints": {
+        "max_files": 50,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "priority_thresholds": {
+          "high": 80,
+          "medium": 50,
+          "low": 30
+        }
+      },
+      "validation": [
+        "node -e \"console.log(1)\""
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "local",
+        "promoted_at": "2026-02-23T09:19:56.848Z"
+      },
+      "summary": "为记忆条目计算优先级分数，优化记忆管理",
+      "schema_version": "1.5.0",
+      "asset_id": "sha256:e934f621e1528fe690e4feab261d4d1a6cb5ea2c2b49bbfe211ae0d1a03737a7"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_forgetting_curve",
+      "category": "optimize",
+      "signals_match": [
+        "遗忘曲线",
+        "spaced repetition",
+        "间隔重复",
+        "review memory",
+        "复习记忆",
+        "记忆强化"
+      ],
+      "preconditions": [
+        "需要强化长期记忆",
+        "检测到重要记忆可能被遗忘",
+        "到达复习时间点"
+      ],
+      "strategy": [
+        "1. 实现艾宾浩斯遗忘曲线算法",
+        "2. 为每个记忆条目计算最佳复习时间:",
+        "   - 首次复习：1 天后",
+        "   - 第二次：3 天后",
+        "   - 第三次：7 天后",
+        "   - 第四次：14 天后",
+        "   - 之后：每月一次",
+        "3. 生成每日复习清单",
+        "4. 主动提醒用户复习重要记忆",
+        "5. 根据复习效果调整间隔"
+      ],
+      "constraints": {
+        "max_files": 30,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "review_intervals": [
+          1,
+          3,
+          7,
+          14,
+          30,
+          60,
+          90
+        ]
+      },
+      "validation": [
+        "node -e \"console.log(1)\""
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "local",
+        "promoted_at": "2026-02-23T09:19:56.848Z"
+      },
+      "summary": "基于遗忘曲线的间隔重复记忆强化系统",
+      "schema_version": "1.5.0",
+      "asset_id": "sha256:d6bccb8b40d96ebd6d85e2da0944296513c88ce87f92eee467700682bc169619"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_memory_export_import",
+      "category": "innovate",
+      "signals_match": [
+        "导出记忆",
+        "export memory",
+        "备份记忆",
+        "backup memories",
+        "导入记忆",
+        "import memory",
+        "迁移记忆"
+      ],
+      "preconditions": [
+        "用户要求导出/备份记忆",
+        "需要迁移记忆到新设备",
+        "定期备份时间到"
+      ],
+      "strategy": [
+        "1. 导出模式:",
+        "   - 打包所有记忆文件 (MEMORY.md + memory/)",
+        "   - 生成 JSON 格式的结构化导出",
+        "   - 创建 Git 提交或云存储备份",
+        "   - 可选加密敏感记忆",
+        "2. 导入模式:",
+        "   - 验证导入文件的完整性",
+        "   - 合并冲突的记忆条目",
+        "   - 保留时间戳和元数据",
+        "   - 生成导入报告",
+        "3. 支持增量备份和全量备份"
+      ],
+      "constraints": {
+        "max_files": 100,
+        "forbidden_paths": [
+          ".git",
+          "node_modules",
+          "sensitive"
+        ],
+        "backup_format": [
+          "json",
+          "markdown",
+          "zip"
+        ],
+        "encryption": "optional"
+      },
+      "validation": [
+        "node -e \"console.log(1)\"",
+        "test -d backups || mkdir backups"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "local",
+        "promoted_at": "2026-02-23T09:19:56.848Z"
+      },
+      "summary": "记忆系统的导出、导入和备份功能",
+      "schema_version": "1.5.0",
+      "asset_id": "sha256:521b081688558e8588e99db7f51b33cb8ebe03cecb7b4022682919c98887ef55"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_memory_analytics",
+      "category": "optimize",
+      "signals_match": [
+        "记忆统计",
+        "memory stats",
+        "记忆分析",
+        "memory analytics",
+        "记忆报告",
+        "memory report"
+      ],
+      "preconditions": [
+        "用户要求查看记忆统计",
+        "月度/年度记忆总结",
+        "需要优化记忆系统"
+      ],
+      "strategy": [
+        "1. 收集记忆系统指标:",
+        "   - 记忆条目总数",
+        "   - 每日/周/月新增记忆数",
+        "   - 记忆访问频率 TOP10",
+        "   - 记忆关联网络密度",
+        "   - 平均记忆优先级分数",
+        "   - 待复习记忆数量",
+        "2. 生成可视化报告",
+        "3. 识别记忆模式和趋势",
+        "4. 提供记忆系统优化建议"
+      ],
+      "constraints": {
+        "max_files": 50,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "report_format": [
+          "markdown",
+          "json",
+          "chart"
+        ]
+      },
+      "validation": [
+        "node -e \"console.log(1)\""
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "local",
+        "promoted_at": "2026-02-23T09:19:56.848Z"
+      },
+      "summary": "记忆系统数据分析和统计报告",
+      "schema_version": "1.5.0",
+      "asset_id": "sha256:89bf68825425a292728bc29bc3ffa63c8f94db188399ec328ae437f5325b8fed"
     }
   ]
 }

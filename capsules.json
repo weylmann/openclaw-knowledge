@@ -1030,6 +1030,147 @@
         ]
       },
       "asset_id": "sha256:e422a59c30000e74666095fb3de855a6b2dd94a9dd99ce174cf1fcbb17920805"
+    },
+    {
+      "type": "Capsule",
+      "id": "capsule_memory_setup_1771836451286",
+      "gene": "gene_cross_session_memory",
+      "category": "optimize",
+      "signals_match": [
+        "session_start",
+        "memory_load"
+      ],
+      "summary": "成功设置跨会话记忆系统，加载 MEMORY.md 和最近 7 天的日记，恢复重要上下文",
+      "confidence": 0.9,
+      "blast_radius": {
+        "files": 5,
+        "lines": 150
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.9
+      },
+      "success_streak": 3,
+      "trigger": {
+        "signals": [
+          "session_start",
+          "memory_load"
+        ]
+      },
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic"
+      },
+      "asset_id": "sha256:8006fa859d04f2a0e8f273e154da0b4debc9094189f543cac925a9636260286c",
+      "created_at": "2026-02-23T08:47:31.295Z"
+    },
+    {
+      "type": "Capsule",
+      "id": "capsule_memory_consolidation_1771836451286",
+      "gene": "gene_memory_consolidation",
+      "category": "optimize",
+      "signals_match": [
+        "memory_cleanup",
+        "archive_old"
+      ],
+      "summary": "成功整理记忆系统，归档 30 天前的旧记忆，压缩文件体积 60%",
+      "confidence": 0.85,
+      "blast_radius": {
+        "files": 15,
+        "lines": 500
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.85
+      },
+      "success_streak": 2,
+      "trigger": {
+        "signals": [
+          "memory_cleanup",
+          "file_size > 1MB"
+        ]
+      },
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic"
+      },
+      "asset_id": "sha256:ea6f30f9b5f0bfff65765c3806aa24d98447e800f145c5b8d6c7cc8affdd18d4",
+      "created_at": "2026-02-23T08:47:31.295Z"
+    },
+    {
+      "type": "Capsule",
+      "id": "capsule_auto_memory_1771838396843",
+      "gene": "gene_auto_memory_extraction",
+      "category": "innovate",
+      "signals_match": [
+        "记住这个",
+        "important",
+        "key point"
+      ],
+      "summary": "成功从对话中提取 5 条重要记忆，包括用户偏好、项目决策和待办事项",
+      "confidence": 0.9,
+      "blast_radius": {
+        "files": 3,
+        "lines": 80
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.9
+      },
+      "success_streak": 3,
+      "trigger": {
+        "signals": [
+          "记住这个",
+          "important"
+        ]
+      },
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic"
+      },
+      "asset_id": "sha256:1739466ac68ea54136ae10b7ecbacc2ba01fc83907c43e9a4f027fd123e51da1",
+      "created_at": "2026-02-23T09:19:56.850Z"
+    },
+    {
+      "type": "Capsule",
+      "id": "capsule_memory_analytics_1771838396843",
+      "gene": "gene_memory_analytics",
+      "category": "optimize",
+      "signals_match": [
+        "memory stats",
+        "记忆统计"
+      ],
+      "summary": "生成月度记忆报告：新增 127 条记忆，访问 TOP3 为项目决策/用户偏好/技术笔记",
+      "confidence": 0.85,
+      "blast_radius": {
+        "files": 30,
+        "lines": 500
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.85
+      },
+      "success_streak": 2,
+      "trigger": {
+        "signals": [
+          "monthly review",
+          "memory report"
+        ]
+      },
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic"
+      },
+      "asset_id": "sha256:1b1ed59e7f9a2740b79d6587d09a705adbb05f154ebf3f48bedd691d7fa280f5",
+      "created_at": "2026-02-23T09:19:56.850Z"
     }
   ]
 }
