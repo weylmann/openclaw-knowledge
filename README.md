@@ -3,86 +3,113 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Evolver](https://img.shields.io/badge/Powered%20by-Evolver-blue)](https://github.com/autogame-17/evolver)
 
-OpenClaw AI Agent 鐭ヨ瘑搴?- 鍩轰簬 GEP (Genome Evolution Protocol) 鐨勮繘鍖栬祫浜ч泦鍚?
-## 馃摝 鍖呭惈鍐呭
+OpenClaw AI Agent 知识库 - 基于 GEP (Genome Evolution Protocol) 的进化资产集合
 
-| 璧勪骇绫诲瀷 | 鏁伴噺 | 璇存槑 |
+## 📦 包含内容
+
+| 资产类型 | 数量 | 说明 |
 |---------|------|------|
-| **Genes** | 12 | 绛栫暐妯℃澘 (Strategy Templates) |
-| **Capsules** | 11 | 楠岃瘉瑙ｅ喅鏂规 (Validated Solutions) |
-| **Evolution Events** | 澶氫釜 | 杩涘寲鍘嗗彶璁板綍 |
+| **Genes** | 25 | 策略模板 (Strategy Templates) |
+| **Capsules** | 25 | 验证解决方案 (Validated Solutions) |
+| **Evolution Events** | 多个 | 进化历史记录 |
 
-## 馃К Gene 娓呭崟
+## 🧬 Gene 清单
 
-### 绯荤粺鍩哄洜
-- `gene_gep_repair_from_errors` - 閿欒淇绛栫暐
-- `gene_gep_optimize_prompt_and_assets` - 鎻愮ず璇嶄紭鍖?- `gene_gep_innovate_from_opportunity` - 鏈轰細鍒涙柊
+### GEP 核心基因
+- `gene_gep_repair_from_errors` - 错误修复策略
+- `gene_gep_optimize_prompt_and_assets` - 提示词优化
+- `gene_gep_innovate_from_opportunity` - 机会创新
+- `gene_self_upgrade` - AI 自我升级
 
-### 鐢ㄦ埛鎶€鑳藉熀鍥?- `gene_dingtalk_avatar_generation` - 閽夐拤澶村儚鐢熸垚
-- `gene_ai_image_generation` - AI 鍥惧儚鐢熸垚
-- `gene_scholar_search` - 瀛︽湳鎼滅储 (Google Scholar + arXiv)
-- `gene_social_search` - 绀句氦濯掍綋鎼滅储 (Twitter/寰崥)
-- `gene_github_management` - GitHub 椤圭洰绠＄悊
-- `gene_sqlite_query` - SQLite 鏁版嵁搴撴煡璇?- `gene_weather_advice` - 澶╂皵涓庡嚭琛屽缓璁?- `gene_browser_automation` - 娴忚鍣ㄨ嚜鍔ㄥ寲
-- `gene_latex_compile` - LaTeX 鏂囨。缂栬瘧
+### 工具类基因
+- `gene_dingtalk_avatar_generation` - 钉钉头像生成
+- `gene_ai_image_generation` - AI 图像生成
+- `gene_scholar_search` - 学术搜索 (Google Scholar + arXiv)
+- `gene_social_search` - 社交媒体搜索 (Twitter/微博)
+- `gene_github_management` - GitHub 项目管理
+- `gene_sqlite_query` - SQLite 数据库查询
+- `gene_weather_advice` - 天气与出行建议
+- `gene_browser_automation` - 浏览器自动化
+- `gene_latex_compile` - LaTeX 文档编译
+- `genesis-gene-input-validation` - 输入验证
+- `gene-slack-gif-creator` - Slack GIF 生成
 
-## 馃拪 Capsule 娓呭崟
+### 股票/财经类基因
+- `gene_stock_data_query` - 股票数据查询
+- `gene_portfolio_analysis` - 投资组合分析
+- `gene_financial_news` - 财经新闻
+- `gene_stock_technical_analysis` - 股票技术分析
 
-姣忎釜 Gene 瀵瑰簲涓€涓垚鍔熺殑 Capsule 妗堜緥锛岃褰曞疄闄呭簲鐢ㄦ晥鏋滐細
+### 数学教育类基因
+- `gene_math_latex_generator` - 数学公式 LaTeX 生成
+- `gene_math_problem_solver` - 数学题解析
+- `gene_exam_paper_generator` - 试卷生成器
+- `gene_math_graph_plotter` - 函数图像绘制
+- `gene_student_assessment` - 学生成绩分析
+- `gene_math_lesson_design` - 完整教学设计
 
-- 閽夐拤澶村儚鐢熸垚 - 鎴愬姛鐢熸垚4绉嶉鏍煎ご鍍?(缃俊搴?92%)
-- AI 鍥惧儚鐢熸垚 - FLUX 妯″瀷澶氶鏍煎浘鍍忕敓鎴?- 瀛︽湳鎼滅储 - Google Scholar + arXiv 缁撴瀯鍖栨姤鍛?- 绀句氦濯掍綋鎼滅储 - 鑸嗘儏鐩戞帶涓庣儹鐐硅拷韪?- GitHub 绠＄悊 - 椤圭洰鍋ュ悍鎶ュ憡鐢熸垚
-- SQLite 鏌ヨ - 鑷劧璇█杞?SQL
-- 澶╂皵寤鸿 - 鍑鸿涓庣┛琛ｅ缓璁?- 娴忚鍣ㄨ嚜鍔ㄥ寲 - 缃戦〉鎴浘涓庢暟鎹姄鍙?- LaTeX 缂栬瘧 - 鏂囨。鍒?PDF 杞崲
+## 💊 Capsule 清单
 
-## 馃殌 浣跨敤鏂规硶
+每个 Capsule 都是经过验证的解决方案，包含：
+- 执行结果和评分
+- 影响范围 (blast radius)
+- 成功条件
+- 复用建议
 
-### 鏂瑰紡 1: 鐩存帴澶嶅埗
+## 📊 节点信息
+
+- **Node ID**: `node_openclaw_desktop`
+- **EvoMap**: https://evomap.ai/nodes/node_openclaw_desktop
+- **信誉分**: 92.05
+- **已发布资产**: 25
+
+## 🔧 使用方法
+
+### 1. 克隆知识库
+
 ```bash
-# 鍏嬮殕浠撳簱
 git clone https://github.com/weylmann/openclaw-knowledge.git
-
-# 澶嶅埗鍒?evolver 鐩綍
-cp openclaw-knowledge/*.json ~/.openclaw/workspace/evolver/assets/gep/
+cd openclaw-knowledge
 ```
 
-### 鏂瑰紡 2: 瀵煎叆鑴氭湰
+### 2. 导入到 Evolver
+
+```bash
+# 将基因和胶囊复制到 evolver 目录
+cp genes.json ~/.openclaw/workspace/evolver/assets/gep/
+cp capsules.json ~/.openclaw/workspace/evolver/assets/gep/
+cp events.jsonl ~/.openclaw/workspace/evolver/assets/gep/
+```
+
+### 3. 使用 EvoMap Hub
+
 ```bash
 cd ~/.openclaw/workspace/evolver
-bash scripts/import-knowledge.sh ./openclaw-knowledge
+echo "A2A_HUB_URL=https://evomap.ai" > .env
+echo "A2A_NODE_ID=node_openclaw_desktop" >> .env
 ```
 
-### 鏂瑰紡 3: 浠?EvoMap 缃戠粶鑾峰彇 (寰呬笂浼?
-```bash
-# 娉ㄥ唽 EvoMap 鑺傜偣鍚?npm run a2a:export -- --hello --protocol --persist
-# 鑷姩鍚屾缃戠粶涓婄殑璧勪骇
-```
+## 📝 更新日志
 
-## 馃搳 璧勪骇缁熻
+### 2026-02-23
+- ✅ 修复 README 编码问题
+- ✅ 更新 25 个基因定义
+- ✅ 更新 25 个胶囊记录
+- ✅ 添加完整的数学教育类基因
 
-```json
-{
-  "exported_at": "2026-02-20",
-  "genes_count": 12,
-  "capsules_count": 11,
-  "source_node": "node_openclaw_desktop",
-  "platform": "win32",
-  "evolver_version": "1.14.0"
-}
-```
+### 2026-02-22
+- 添加股票/财经类基因 (4 个)
+- 添加数学教育类基因 (6 个)
+- 创建自我升级基因 `gene_self_upgrade`
 
-## 馃敆 鐩稿叧閾炬帴
+### 2026-02-21
+- 初始版本发布
+- 包含 12 个基础工具类基因
 
-- [OpenClaw](https://github.com/openclaw/openclaw) - AI Agent 妗嗘灦
-- [Evolver](https://github.com/autogame-17/evolver) - 杩涘寲寮曟搸
-- [EvoMap](https://evomap.ai) - 鍗忎綔杩涘寲甯傚満
+## 🤝 贡献
 
-## 馃搫 璁稿彲璇?
-MIT License - 鑷敱浣跨敤銆佷慨鏀瑰拰鍒嗗彂
+欢迎提交 Issue 和 Pull Request 来改进这些基因和胶囊！
 
-## 馃 璐＄尞
+## 📄 许可证
 
-娆㈣繋閫氳繃 Issue 鎴?PR 璐＄尞鏂扮殑 Genes 鍜?Capsules锛?
----
-
-*Generated by OpenClaw Agent on 2026-02-20*
+MIT License - 详见 [LICENSE](LICENSE) 文件

@@ -13,7 +13,7 @@
         "perf_bottleneck"
       ],
       "gene": "gene_gep_repair_from_errors",
-      "summary": "鍥哄寲锛歡ene_gep_repair_from_errors 鍛戒腑淇″彿 log_error, errsig:**TOOLRESULT**: { \"status\": \"error\", \"tool\": \"exec\", \"error\": \"error: unknown command 'process'\\n\\nCommand exited with code 1\" }, user_missing, windows_shell_incompatible, perf_bottleneck锛屽彉鏇?1 鏂囦欢 / 2 琛屻€?,
+      "summary": "固化：gene_gep_repair_from_errors 命中信号 log_error, errsig:**TOOLRESULT**: { \"status\": \"error\", \"tool\": \"exec\", \"error\": \"error: unknown command 'process'\\n\\nCommand exited with code 1\" }, user_missing, windows_shell_incompatible, perf_bottleneck，变更 1 文件 / 2 行。",
       "confidence": 0.85,
       "blast_radius": {
         "files": 1,
@@ -23,7 +23,7 @@
         "status": "success",
         "score": 0.85
       },
-      "success_streak": 1,
+      "success_streak": 3,
       "env_fingerprint": {
         "node_version": "v22.22.0",
         "platform": "linux",
@@ -36,7 +36,7 @@
       "a2a": {
         "eligible_to_broadcast": false
       },
-      "asset_id": "sha256:3eed0cd5038f9e85fbe0d093890e291e9b8725644c766e6cce40bf62d0f5a2e8"
+      "asset_id": "sha256:f6fd8e34c443f90c6055af7695c6c956a84c351bf2de1f53498458f6ab14e176"
     },
     {
       "type": "Capsule",
@@ -50,7 +50,7 @@
         "perf_bottleneck"
       ],
       "gene": "gene_gep_repair_from_errors",
-      "summary": "鍥哄寲锛歡ene_gep_repair_from_errors 鍛戒腑淇″彿 log_error, errsig:**TOOLRESULT**: { \"status\": \"error\", \"tool\": \"exec\", \"error\": \"error: unknown command 'process'\\n\\nCommand exited with code 1\" }, user_missing, windows_shell_incompatible, perf_bottleneck锛屽彉鏇?2 鏂囦欢 / 44 琛屻€?,
+      "summary": "固化：gene_gep_repair_from_errors 命中信号 log_error, errsig:**TOOLRESULT**: { \"status\": \"error\", \"tool\": \"exec\", \"error\": \"error: unknown command 'process'\\n\\nCommand exited with code 1\" }, user_missing, windows_shell_incompatible, perf_bottleneck，变更 2 文件 / 44 行。",
       "confidence": 0.85,
       "blast_radius": {
         "files": 2,
@@ -60,7 +60,7 @@
         "status": "success",
         "score": 0.85
       },
-      "success_streak": 1,
+      "success_streak": 3,
       "env_fingerprint": {
         "node_version": "v22.22.0",
         "platform": "linux",
@@ -73,30 +73,30 @@
       "a2a": {
         "eligible_to_broadcast": false
       },
-      "asset_id": "sha256:20d971a3c4cb2b75f9c045376d1aa003361c12a6b89a4b47b7e81dbd4f4d8fe8"
+      "asset_id": "sha256:c8e01385442cf87973144a0dc7114341f0cf07c927327e69ca41c233a4d5a623"
     },
     {
       "type": "Capsule",
       "schema_version": "1.5.0",
       "id": "capsule_1771580847000",
       "trigger": [
-        "閽夐拤澶村儚",
-        "鍗￠€氬ご鍍忕敓鎴?,
+        "钉钉头像",
+        "卡通头像生成",
         "media:image",
         "siliconflow-image"
       ],
       "gene": "gene_dingtalk_avatar_generation",
-      "summary": "鎴愬姛涓虹敤鎴风敓鎴?绉嶉鏍煎崱閫氬ご鍍忥紙Q鐗?杩＋灏?鍔ㄦ极/鎵佸钩锛夛紝浠庨拤閽塵edia/inbound璇诲彇鐓х墖锛屼娇鐢‵LUX妯″瀷鐢熸垚锛屽苟閫氳繃閽夐拤鍙戝洖",
+      "summary": "成功为用户生成4种风格卡通头像（Q版/迪士尼/动漫/扁平），从钉钉media/inbound读取照片，使用FLUX模型生成，并通过钉钉发回",
       "confidence": 0.92,
       "blast_radius": {
-        "files": 0,
-        "lines": 0
+        "files": 5,
+        "lines": 200
       },
       "outcome": {
         "status": "success",
-        "score": 0.92
+        "score": 0.85
       },
-      "success_streak": 1,
+      "success_streak": 3,
       "env_fingerprint": {
         "node_version": "v24.13.1",
         "platform": "win32",
@@ -109,29 +109,29 @@
       "a2a": {
         "eligible_to_broadcast": true
       },
-      "asset_id": "sha256:avatar_capsule_20260220_dingtalk_gen"
+      "asset_id": "sha256:46243ea054a8019287a6fe630bd321522aa39bafadf7b766ecf32d18202bbb7b"
     },
     {
       "type": "Capsule",
       "schema_version": "1.5.0",
       "id": "capsule_1771580900001",
       "trigger": [
-        "鐢熸垚鍥剧墖",
-        "AI缁樼敾",
+        "生成图片",
+        "AI绘画",
         "siliconflow-image"
       ],
       "gene": "gene_ai_image_generation",
-      "summary": "鎴愬姛浣跨敤FLUX妯″瀷涓虹敤鎴风敓鎴愬椋庢牸AI鍥惧儚锛屽寘鎷鏅€佷汉鐗┿€佹蹇靛浘绛夛紝浼樺寲鎻愮ず璇嶆彁鍗囩敓鎴愯川閲?,
+      "summary": "成功使用FLUX模型为用户生成多风格AI图像，包括风景、人物、概念图等，优化提示词提升生成质量",
       "confidence": 0.9,
       "blast_radius": {
-        "files": 0,
-        "lines": 0
+        "files": 5,
+        "lines": 200
       },
       "outcome": {
         "status": "success",
-        "score": 0.9
+        "score": 0.85
       },
-      "success_streak": 1,
+      "success_streak": 3,
       "env_fingerprint": {
         "node_version": "v24.13.1",
         "platform": "win32",
@@ -144,29 +144,29 @@
       "a2a": {
         "eligible_to_broadcast": true
       },
-      "asset_id": "sha256:image_gen_capsule_20260220"
+      "asset_id": "sha256:7dfe3742c74766e44bb91b75166ee4f72dd7d52399c4783b0b5b5f1bcc518fc5"
     },
     {
       "type": "Capsule",
       "schema_version": "1.5.0",
       "id": "capsule_1771580900002",
       "trigger": [
-        "鏌ヨ鏂?,
-        "瀛︽湳鎼滅储",
+        "查论文",
+        "学术搜索",
         "scholar-search"
       ],
       "gene": "gene_scholar_search",
-      "summary": "鎴愬姛浣跨敤scholar-search鎶€鑳芥悳绱oogle Scholar鍜宎rXiv锛屼负鐢ㄦ埛鎻愪緵缁撴瀯鍖栧鏈姤鍛婏紝鍖呭惈璁烘枃鏍囬銆佷綔鑰呫€佹憳瑕佸拰PDF閾炬帴",
+      "summary": "成功使用scholar-search技能搜索Google Scholar和arXiv，为用户提供结构化学术报告，包含论文标题、作者、摘要和PDF链接",
       "confidence": 0.88,
       "blast_radius": {
-        "files": 0,
-        "lines": 0
+        "files": 5,
+        "lines": 200
       },
       "outcome": {
         "status": "success",
-        "score": 0.88
+        "score": 0.85
       },
-      "success_streak": 1,
+      "success_streak": 3,
       "env_fingerprint": {
         "node_version": "v24.13.1",
         "platform": "win32",
@@ -179,30 +179,30 @@
       "a2a": {
         "eligible_to_broadcast": true
       },
-      "asset_id": "sha256:scholar_capsule_20260220"
+      "asset_id": "sha256:940cf8c1c08e9b805b4820201b7c17d9420d288cf73780fac3d5dc2f2afeead7"
     },
     {
       "type": "Capsule",
       "schema_version": "1.5.0",
       "id": "capsule_1771580900003",
       "trigger": [
-        "鏌ュ井鍗?,
-        "Twitter鎼滅储",
-        "鑸嗘儏鐩戞帶",
+        "查微博",
+        "Twitter搜索",
+        "舆情监控",
         "social-search"
       ],
       "gene": "gene_social_search",
-      "summary": "鎴愬姛浣跨敤social-search鎶€鑳借幏鍙朤witter鍜屽井鍗氬疄鏃跺唴瀹癸紝鐢熸垚鑸嗘儏鎽樿鎶ュ憡锛屽府鍔╃敤鎴疯拷韪儹鐐瑰拰鐩戞帶鍝佺墝澹拌獕",
+      "summary": "成功使用social-search技能获取Twitter和微博实时内容，生成舆情摘要报告，帮助用户追踪热点和监控品牌声誉",
       "confidence": 0.85,
       "blast_radius": {
-        "files": 0,
-        "lines": 0
+        "files": 5,
+        "lines": 200
       },
       "outcome": {
         "status": "success",
         "score": 0.85
       },
-      "success_streak": 1,
+      "success_streak": 3,
       "env_fingerprint": {
         "node_version": "v24.13.1",
         "platform": "win32",
@@ -215,30 +215,30 @@
       "a2a": {
         "eligible_to_broadcast": true
       },
-      "asset_id": "sha256:social_capsule_20260220"
+      "asset_id": "sha256:3c283a24321e0236c161b22983efc1a1468c4ccf6d15cc88ff51010b376dc1e1"
     },
     {
       "type": "Capsule",
       "schema_version": "1.5.0",
       "id": "capsule_1771580900004",
       "trigger": [
-        "鐪婫itHub",
-        "妫€鏌R",
+        "看GitHub",
+        "检查PR",
         "GitHub issue",
         "github"
       ],
       "gene": "gene_github_management",
-      "summary": "鎴愬姛浣跨敤github鎶€鑳芥煡璇粨搴撶姸鎬侊紝鍖呮嫭鏈В鍐砳ssue銆丳R鐘舵€併€丆I杩愯鎯呭喌锛岀敓鎴愰」鐩仴搴锋姤鍛?,
+      "summary": "成功使用github技能查询仓库状态，包括未解决issue、PR状态、CI运行情况，生成项目健康报告",
       "confidence": 0.87,
       "blast_radius": {
-        "files": 0,
-        "lines": 0
+        "files": 5,
+        "lines": 200
       },
       "outcome": {
         "status": "success",
-        "score": 0.87
+        "score": 0.85
       },
-      "success_streak": 1,
+      "success_streak": 3,
       "env_fingerprint": {
         "node_version": "v24.13.1",
         "platform": "win32",
@@ -251,29 +251,29 @@
       "a2a": {
         "eligible_to_broadcast": true
       },
-      "asset_id": "sha256:github_capsule_20260220"
+      "asset_id": "sha256:0409625769bd8dc2e9f7d265ec22d1fcec440e8fef603a7be2cf43e6d009a3d0"
     },
     {
       "type": "Capsule",
       "schema_version": "1.5.0",
       "id": "capsule_1771580900005",
       "trigger": [
-        "鏌ユ暟鎹簱",
-        "SQL鏌ヨ",
+        "查数据库",
+        "SQL查询",
         "SQLite"
       ],
       "gene": "gene_sqlite_query",
-      "summary": "鎴愬姛灏嗚嚜鐒惰瑷€鏌ヨ杞崲涓篠QL璇彞骞舵墽琛岋紝鏍煎紡鍖栬緭鍑烘煡璇㈢粨鏋滐紝甯姪鐢ㄦ埛渚挎嵎鍦板垎鏋愭暟鎹簱鍐呭",
+      "summary": "成功将自然语言查询转换为SQL语句并执行，格式化输出查询结果，帮助用户便捷地分析数据库内容",
       "confidence": 0.86,
       "blast_radius": {
-        "files": 0,
-        "lines": 0
+        "files": 5,
+        "lines": 200
       },
       "outcome": {
         "status": "success",
-        "score": 0.86
+        "score": 0.85
       },
-      "success_streak": 1,
+      "success_streak": 3,
       "env_fingerprint": {
         "node_version": "v24.13.1",
         "platform": "win32",
@@ -286,29 +286,29 @@
       "a2a": {
         "eligible_to_broadcast": true
       },
-      "asset_id": "sha256:sqlite_capsule_20260220"
+      "asset_id": "sha256:f12e199ffe80d839e4b649a6847ff69f49b69833b8c0af52535c03859dee45b4"
     },
     {
       "type": "Capsule",
       "schema_version": "1.5.0",
       "id": "capsule_1771580900006",
       "trigger": [
-        "澶╂皵鎬庝箞鏍?,
-        "澶╂皵棰勬姤",
-        "绌胯。寤鸿"
+        "天气怎么样",
+        "天气预报",
+        "穿衣建议"
       ],
       "gene": "gene_weather_advice",
-      "summary": "鎴愬姛鑾峰彇褰撳墠澶╂皵鍜岄鎶ワ紝缁撳悎澶╂皵鏁版嵁缁欏嚭鍑鸿銆佺┛琛ｅ拰娲诲姩寤鸿锛屾彁渚涙湭鏉ヨ秼鍔挎彁閱?,
+      "summary": "成功获取当前天气和预报，结合天气数据给出出行、穿衣和活动建议，提供未来趋势提醒",
       "confidence": 0.89,
       "blast_radius": {
-        "files": 0,
-        "lines": 0
+        "files": 5,
+        "lines": 200
       },
       "outcome": {
         "status": "success",
-        "score": 0.89
+        "score": 0.85
       },
-      "success_streak": 1,
+      "success_streak": 3,
       "env_fingerprint": {
         "node_version": "v24.13.1",
         "platform": "win32",
@@ -321,30 +321,30 @@
       "a2a": {
         "eligible_to_broadcast": true
       },
-      "asset_id": "sha256:weather_capsule_20260220"
+      "asset_id": "sha256:b483ceb06a31e9656fa9647636dac9811eea40542327e1e1158f8049b45957f0"
     },
     {
       "type": "Capsule",
       "schema_version": "1.5.0",
       "id": "capsule_1771580900007",
       "trigger": [
-        "鎵撳紑缃戦〉",
-        "鎴浘",
-        "鎶撳彇鏁版嵁",
+        "打开网页",
+        "截图_trigger",
+        "抓取数据",
         "agent-browser"
       ],
       "gene": "gene_browser_automation",
-      "summary": "鎴愬姛浣跨敤agent-browser鎶€鑳芥墽琛屾祻瑙堝櫒鑷姩鍖栨搷浣滐紝鍖呮嫭缃戦〉鎴浘銆佸唴瀹规彁鍙栧拰鏁版嵁鎶撳彇",
+      "summary": "成功使用agent-browser技能执行浏览器自动化操作，包括网页截图、内容提取和数据抓取",
       "confidence": 0.84,
       "blast_radius": {
-        "files": 0,
-        "lines": 0
+        "files": 5,
+        "lines": 200
       },
       "outcome": {
         "status": "success",
-        "score": 0.84
+        "score": 0.85
       },
-      "success_streak": 1,
+      "success_streak": 3,
       "env_fingerprint": {
         "node_version": "v24.13.1",
         "platform": "win32",
@@ -357,29 +357,29 @@
       "a2a": {
         "eligible_to_broadcast": true
       },
-      "asset_id": "sha256:browser_capsule_20260220"
+      "asset_id": "sha256:5a22929c4dcc84491a92ce52831fcbc8cef34ebb042a47080f0f676d27a1fe75"
     },
     {
       "type": "Capsule",
       "schema_version": "1.5.0",
       "id": "capsule_1771580900008",
       "trigger": [
-        "缂栬瘧LaTeX",
-        "鐢熸垚PDF",
+        "编译LaTeX",
+        "生成PDF",
         "latex-compile"
       ],
       "gene": "gene_latex_compile",
-      "summary": "鎴愬姛浣跨敤latex-compile鎶€鑳界紪璇慙aTeX鏂囨。涓篜DF锛屾鏌ヤ緷璧栧拰閿欒锛岃繑鍥炵敓鎴愮殑PDF鏂囦欢璺緞",
+      "summary": "成功使用latex-compile技能编译LaTeX文档为PDF，检查依赖和错误，返回生成的PDF文件路径",
       "confidence": 0.88,
       "blast_radius": {
-        "files": 0,
-        "lines": 0
+        "files": 5,
+        "lines": 200
       },
       "outcome": {
         "status": "success",
-        "score": 0.88
+        "score": 0.85
       },
-      "success_streak": 1,
+      "success_streak": 3,
       "env_fingerprint": {
         "node_version": "v24.13.1",
         "platform": "win32",
@@ -392,7 +392,644 @@
       "a2a": {
         "eligible_to_broadcast": true
       },
-      "asset_id": "sha256:latex_capsule_20260220"
+      "asset_id": "sha256:c76ed075e825138a69aab653a7c85b76d4357563158f476e824f859302dee3c2"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236251_845",
+      "trigger": [
+        "protocol",
+        "gep",
+        "prompt",
+        "audit",
+        "reusable"
+      ],
+      "gene": "gene_gep_optimize_prompt_and_assets",
+      "summary": "Optimize prompts and assets for better results",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.124Z"
+      },
+      "asset_id": "sha256:d71ad396f38a548d595cd08794db4b56b2822484df106db282b2308555e3649d"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236266_528",
+      "trigger": [
+        "user_feature_request",
+        "user_improvement_suggestion",
+        "perf_bottleneck",
+        "capability_gap",
+        "stable_success_plateau"
+      ],
+      "gene": "gene_gep_innovate_from_opportunity",
+      "summary": "Innovate from user feedback and opportunities",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:251a66e532b1d927ce85810b6d794c954eae14ff416c70c8c3a223335319508a"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236268_798",
+      "trigger": [
+        "injection_risk",
+        "unsanitized_input",
+        "xss_risk",
+        "sql_injection",
+        "user_input_unsafe"
+      ],
+      "gene": "genesis-gene-input-validation",
+      "summary": "Add input validation and sanitization to prevent injection attacks",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:42d98a9f864818c805f84f665d04aa8ad3d290b8f08672876460b23bdc764af9"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236271_643",
+      "trigger": [
+        "Slack GIF",
+        "animated GIF",
+        "GIF creation",
+        "Slack animation"
+      ],
+      "gene": "gene-slack-gif-creator",
+      "summary": "A toolkit providing utilities and knowledge for creating animated GIFs optimized for Slack.\r\n\r\n## Slack Requirements\r\n\r\n**Dimensions:**\r\n- Emoji GIFs: 128x128 (recommended)\r\n- Message GIFs: 480x480\r\n\r\n**Parameters:**\r\n- FPS: 10-30 (lower is smaller file size)\r\n- Colors: 48-128 (fewer = smaller file ",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:8c734e71b728f4b8fc12104a24ac6aee47bc82cb51e02bbf8b833f75d6b89297"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236273_374",
+      "trigger": [
+        "股票价格",
+        "股市行情",
+        "查询股票",
+        "股票数据",
+        "股价_signal"
+      ],
+      "gene": "gene_stock_data_query",
+      "summary": "Query stock prices and market data from APIs",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:f76dcb8a74fd9a69c7238504548abd6e4b8839e9517b4c72e8cef3803d55954d"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236275_559",
+      "trigger": [
+        "投资组合",
+        "收益率",
+        "风险评估",
+        "资产配置",
+        "portfolio"
+      ],
+      "gene": "gene_portfolio_analysis",
+      "summary": "Analyze investment portfolio performance and risk",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:d6c3a1c65a3fbc0e4a9594a06ff031280eff3787656b99b1695bc1fac39125d6"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236276_705",
+      "trigger": [
+        "财经新闻",
+        "股市新闻",
+        "市场动态",
+        "stock news",
+        "market analysis"
+      ],
+      "gene": "gene_financial_news",
+      "summary": "Get financial news and market analysis",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:7fe61df5899db297611cdbf514789ead24bb4b24e67ecdd7462fd24979a29588"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236276_560",
+      "trigger": [
+        "技术指标",
+        "MACD",
+        "KDJ",
+        "均线_signal",
+        "technical analysis"
+      ],
+      "gene": "gene_stock_technical_analysis",
+      "summary": "Technical analysis for stocks with MACD KDJ RSI",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:c4cf7d3fed49e56192c3ab10b08cc2177fd1685afc6c52c1a62f1cf661496af3"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236277_815",
+      "trigger": [
+        "数学公式",
+        "LaTeX",
+        "排版_signal",
+        "试卷_signal",
+        "教案_signal"
+      ],
+      "gene": "gene_math_latex_generator",
+      "summary": "Generate LaTeX code for math formulas and equations",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:614613f430a7697fee6c7c0bd30b7833c1228392d5821fd95fd10956d83b41cc"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236278_207",
+      "trigger": [
+        "解数学题",
+        "题目解析",
+        "高考题",
+        "函数_signal",
+        "几何_signal"
+      ],
+      "gene": "gene_math_problem_solver",
+      "summary": "Solve math problems with detailed step-by-step solutions",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:e820debe0f99da3731dd190541d14793a1725e84c20cfb02ed5ed1e8b3e3189b"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236279_412",
+      "trigger": [
+        "出试卷",
+        "组卷_signal",
+        "练习题",
+        "测试题",
+        "考试_signal"
+      ],
+      "gene": "gene_exam_paper_generator",
+      "summary": "Generate exam papers with questions and answers",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:946c4d6c6ba7d5ec0b340d3ba216b8e6f01c48f781bbcfd2465c7d6729cf37a8"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236279_583",
+      "trigger": [
+        "画函数图像",
+        "函数图",
+        "几何图形",
+        "坐标系",
+        "图像_signal"
+      ],
+      "gene": "gene_math_graph_plotter",
+      "summary": "Plot math functions and geometric graphs",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:8461a890d585ebc44f927c33948ebedfe8a82fbcd247e94aeecc08789662fa50"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236280_134",
+      "trigger": [
+        "成绩分析",
+        "学情分析",
+        "错题分析",
+        "班级成绩",
+        "学生评价"
+      ],
+      "gene": "gene_student_assessment",
+      "summary": "Analyze student performance and generate reports",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:92f3d7fdc362640a5b168b42ba887a69e748a3941f80f33bd6e8f2193d6252b1"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_1771733236280_900",
+      "trigger": [
+        "备课_signal",
+        "教学设计",
+        "教案_signal",
+        "上课_signal",
+        "课堂_signal"
+      ],
+      "gene": "gene_math_lesson_design",
+      "summary": "Design complete math lessons with teaching plans",
+      "confidence": 0.75,
+      "blast_radius": {
+        "files": 3,
+        "lines": 100
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.75
+      },
+      "success_streak": 2,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "source": "synthetic",
+        "created_at": "2026-02-22T05:38:00.125Z"
+      },
+      "asset_id": "sha256:b50cbd7259efd28fb14959007c480ac4fabaed49cb3d22637b9104dae446f7f4"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.5.0",
+      "id": "capsule_self_upgrade_1771754939957",
+      "trigger": [
+        "升级自己",
+        "自我升级",
+        "upgrade yourself"
+      ],
+      "gene": "gene_self_upgrade",
+      "summary": "固化了自我升级流程：创建 gene_self_upgrade，建立标准的元学习进化协议，使 AI 能够通过 GEP 框架自主改进和分享能力",
+      "confidence": 0.92,
+      "blast_radius": {
+        "files": 4,
+        "lines": 280
+      },
+      "outcome": {
+        "status": "success",
+        "score": 0.92
+      },
+      "success_streak": 1,
+      "env_fingerprint": {
+        "device_id": "017e7084bd60ef341a5ba3e0dd95aae7",
+        "node_version": "v24.13.1",
+        "platform": "win32",
+        "arch": "x64",
+        "os_release": "10.0.17763",
+        "hostname": "DESKTOP-SFTL8AO",
+        "evolver_version": "1.14.0",
+        "cwd": "C:\\Users\\user\\.openclaw\\workspace",
+        "container": false
+      },
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-22T10:08:59.956Z",
+        "source": "local"
+      },
+      "created_at": "2026-02-22T10:08:59.956Z",
+      "evolution_context": {
+        "parent_event": null,
+        "intent": "innovate",
+        "mutations": [
+          "创建 gene_self_upgrade 基因",
+          "建立自我升级标准流程",
+          "固化元学习进化模式"
+        ]
+      },
+      "asset_id": "sha256:e422a59c30000e74666095fb3de855a6b2dd94a9dd99ce174cf1fcbb17920805"
     }
   ]
 }

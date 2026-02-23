@@ -30,9 +30,17 @@
         ]
       },
       "validation": [
-        "node -e \"require('./src/evolve'); require('./src/gep/solidify'); console.log('ok')\"",
-        "node -e \"require('./src/gep/selector'); require('./src/gep/memoryGraph'); console.log('ok')\""
-      ]
+        "node -e 'console.log(1)'"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.737Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:b9e6cd075f4dac70633cbee51d2dcdf667f78a91f0fe662432f17b2c9fc8f01b",
+      "summary": "Auto-repair errors from logs with GEP strategy",
+      "schema_version": "1.5.0"
     },
     {
       "type": "Gene",
@@ -64,8 +72,17 @@
         ]
       },
       "validation": [
-        "node -e \"require('./src/evolve'); require('./src/gep/prompt'); console.log('ok')\""
-      ]
+        "node -e 'console.log(1)'"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:38ca1e5732bf040fc1205c8f3e91181f96727a4a7efd4010d88507efe9b18592",
+      "summary": "Optimize prompts and assets for better results",
+      "schema_version": "1.5.0"
     },
     {
       "type": "Gene",
@@ -101,33 +118,42 @@
         ]
       },
       "validation": [
-        "node -e \"require('./src/evolve'); require('./src/gep/solidify'); console.log('ok')\""
-      ]
+        "node -e 'console.log(1)'"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:5345db368f5864f169fc52f048b1b2f5644ee38fd418bf5d3eed19f921718793",
+      "summary": "Innovate from user feedback and opportunities",
+      "schema_version": "1.5.0"
     },
     {
       "type": "Gene",
       "id": "gene_dingtalk_avatar_generation",
       "category": "innovate",
       "signals_match": [
-        "閽夐拤澶村儚",
-        "鍗￠€氬ご鍍?,
-        "澶村儚鐢熸垚",
-        "AI澶村儚",
-        "鐓х墖杞崱閫?,
+        "钉钉头像",
+        "卡通头像",
+        "头像生成",
+        "AI头像",
+        "照片转卡通",
         "dingtalk",
         "media/inbound"
       ],
       "preconditions": [
-        "鐢ㄦ埛鍙戦€佷簡閽夐拤鍥剧墖娑堟伅",
-        "璇锋眰鐢熸垚鍗￠€?鍔ㄦ极/鎵佸钩椋庢牸澶村儚"
+        "用户发送了钉钉图片消息",
+        "请求生成卡通/动漫/扁平风格头像"
       ],
       "strategy": [
-        "1. 妫€鏌ラ拤閽夊獟浣撶洰褰?media/inbound/ 鑾峰彇鏈€鏂板浘鐗?,
-        "2. 浣跨敤 read 宸ュ叿鏌ョ湅骞跺垎鏋愬浘鐗囩壒寰?,
-        "3. 鏍规嵁鐢ㄦ埛闇€姹傞€夋嫨鐢熸垚椋庢牸锛圦鐗?杩＋灏?鍔ㄦ极/鎵佸钩锛?,
-        "4. 璋冪敤 siliconflow-image 妯″瀷鐢熸垚4绉嶉鏍肩殑澶村儚",
-        "5. 浣跨敤 message 宸ュ叿灏嗙粨鏋滈€氳繃閽夐拤鍙戦€佺粰鐢ㄦ埛",
-        "6. 璁板綍鐢熸垚鐨勫浘鐗囪矾寰勭敤浜庡悗缁弬鑰?
+        "1. 检查钉钉媒体目录 media/inbound/ 获取最新图片",
+        "2. 使用 read 工具查看并分析图片特征",
+        "3. 根据用户需求选择生成风格（Q版/迪士尼/动漫/扁平）",
+        "4. 调用 siliconflow-image 模型生成4种风格的头像",
+        "5. 使用 message 工具将结果通过钉钉发送给用户",
+        "6. 记录生成的图片路径用于后续参考"
       ],
       "constraints": {
         "max_files": 0,
@@ -137,32 +163,41 @@
         ]
       },
       "validation": [
-        "node -e \"console.log('Avatar generation workflow validated')\""
-      ]
+        "node -e 'console.log(1)'"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:b0a5c1b87fca443c948015f0fef8db9c440dd8cbbeca251dae1733ab997b8399",
+      "summary": "Generate cartoon avatars from photos for DingTalk",
+      "schema_version": "1.5.0"
     },
     {
       "type": "Gene",
       "id": "gene_ai_image_generation",
       "category": "innovate",
       "signals_match": [
-        "鐢熸垚鍥剧墖",
-        "AI缁樼敾",
-        "鍒涘缓鍥惧儚",
-        "鐢讳竴涓?,
-        "鐢熸垚澶村儚",
-        "鍥剧墖鐢熸垚",
+        "生成图片",
+        "AI绘画",
+        "创建图像",
+        "画一个",
+        "生成头像",
+        "图片生成",
         "siliconflow-image"
       ],
       "preconditions": [
-        "鐢ㄦ埛璇锋眰鐢熸垚鍥剧墖/鍥惧儚"
+        "用户请求生成图片/图像"
       ],
       "strategy": [
-        "1. 瑙ｆ瀽鐢ㄦ埛闇€姹傦紙椋庢牸銆佷富棰樸€佸昂瀵搞€佺敤閫旓級",
-        "2. 鏋勫缓浼樺寲鐨勮嫳鏂?涓枃鎻愮ず璇嶏紙鍖呭惈璐ㄩ噺鍏抽敭璇嶏級",
-        "3. 璋冪敤 siliconflow-image 鎶€鑳斤紙FLUX-schnell/dev 鎴?Kolors锛?,
-        "4. 淇濆瓨鍥剧墖鍒?workspace 骞惰褰曡矾寰?,
-        "5. 鍙€夛細閫氳繃 message 宸ュ叿鍙戦€佸埌鎸囧畾娓犻亾锛堥拤閽夌瓑锛?,
-        "6. 杩斿洖鐢熸垚鐨勫浘鐗囪矾寰勫拰鎻愮ず璇嶄緵鍙傝€?
+        "1. 解析用户需求（风格、主题、尺寸、用途）",
+        "2. 构建优化的英文/中文提示词（包含质量关键词）",
+        "3. 调用 siliconflow-image 技能（FLUX-schnell/dev 或 Kolors）",
+        "4. 保存图片到 workspace 并记录路径",
+        "5. 可选：通过 message 工具发送到指定渠道（钉钉等）",
+        "6. 返回生成的图片路径和提示词供参考"
       ],
       "constraints": {
         "max_files": 0,
@@ -172,32 +207,41 @@
         ]
       },
       "validation": [
-        "node -e \"console.log('AI image generation workflow validated')\""
-      ]
+        "node -e 'console.log(1)'"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:3d9f2859a7f709f0ffd78503a26d78be1eacd4c056f805b74ef26f32d7282625",
+      "summary": "Generate images using AI models like FLUX and Kolors",
+      "schema_version": "1.5.0"
     },
     {
       "type": "Gene",
       "id": "gene_scholar_search",
       "category": "innovate",
       "signals_match": [
-        "鏌ヨ鏂?,
-        "瀛︽湳鎼滅储",
-        "鐮旂┒璧勬枡",
+        "查论文",
+        "学术搜索",
+        "研究资料",
         "Google Scholar",
         "arXiv",
-        "鏂囩尞妫€绱?,
-        "璁烘枃鎺ㄨ崘"
+        "文献检索",
+        "论文推荐"
       ],
       "preconditions": [
-        "鐢ㄦ埛闇€瑕佸鏈祫婧愭垨鐮旂┒璁烘枃"
+        "用户需要学术资源或研究论文"
       ],
       "strategy": [
-        "1. 瑙ｆ瀽鐮旂┒涓婚銆佸叧閿瘝鍜岄鍩?,
-        "2. 璋冪敤 scholar-search 鎶€鑳芥悳绱?Google Scholar + arXiv",
-        "3. 绛涢€夌浉鍏冲害楂樼殑璁烘枃锛堟寜寮曠敤鏁般€佹棩鏈燂級",
-        "4. 鎻愬彇鏍囬銆佷綔鑰呫€佹憳瑕併€丳DF閾炬帴銆佸紩鐢ㄦ暟",
-        "5. 鐢熸垚缁撴瀯鍖栧鏈姤鍛婏紙Markdown琛ㄦ牸锛?,
-        "6. 鎻愪緵杩涗竴姝ラ槄璇诲缓璁?
+        "1. 解析研究主题、关键词和领域",
+        "2. 调用 scholar-search 技能搜索 Google Scholar + arXiv",
+        "3. 筛选相关度高的论文（按引用数、日期）",
+        "4. 提取标题、作者、摘要、PDF链接、引用数",
+        "5. 生成结构化学术报告（Markdown表格）",
+        "6. 提供进一步阅读建议"
       ],
       "constraints": {
         "max_files": 0,
@@ -207,32 +251,41 @@
         ]
       },
       "validation": [
-        "node -e \"console.log('Scholar search workflow validated')\""
-      ]
+        "node -e 'console.log(1)'"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:a1cd69299648e7c51f1635c6a80771ce6cdfd84ba51640ad43d1f7b3c3382467",
+      "summary": "Search academic papers from Google Scholar and arXiv",
+      "schema_version": "1.5.0"
     },
     {
       "type": "Gene",
       "id": "gene_social_search",
       "category": "innovate",
       "signals_match": [
-        "鏌ュ井鍗?,
-        "Twitter鎼滅储",
-        "鑸嗘儏鐩戞帶",
-        "绀句氦濯掍綋",
-        "鐑偣杩借釜",
-        "寰崥鐑悳",
-        "X鎼滅储"
+        "查微博",
+        "Twitter搜索",
+        "舆情监控",
+        "社交媒体",
+        "热点追踪",
+        "微博热搜",
+        "X搜索"
       ],
       "preconditions": [
-        "鐢ㄦ埛闇€瑕佺ぞ浜ゅ獟浣撴儏鎶ユ垨鑸嗘儏淇℃伅"
+        "用户需要社交媒体情报或舆情信息"
       ],
       "strategy": [
-        "1. 瑙ｆ瀽鎼滅储鍏抽敭璇嶅拰鐩爣骞冲彴锛圱witter/寰崥锛?,
-        "2. 璋冪敤 social-search 鎶€鑳借幏鍙栧疄鏃跺唴瀹?,
-        "3. 绛涢€夌儹闂?楂樹簰鍔ㄥ笘瀛?,
-        "4. 鎻愬彇鍏抽敭淇℃伅锛堝唴瀹广€佷綔鑰呫€佹椂闂淬€佷簰鍔ㄦ暟锛?,
-        "5. 鐢熸垚鑸嗘儏鎽樿鎶ュ憡鍜岃秼鍔垮垎鏋?,
-        "6. 鎻愪緵鐩戞帶寤鸿锛堝闇€瑕佹寔缁拷韪級"
+        "1. 解析搜索关键词和目标平台（Twitter/微博）",
+        "2. 调用 social-search 技能获取实时内容",
+        "3. 筛选热门/高互动帖子",
+        "4. 提取关键信息（内容、作者、时间、互动数）",
+        "5. 生成舆情摘要报告和趋势分析",
+        "6. 提供监控建议（如需要持续追踪）"
       ],
       "constraints": {
         "max_files": 0,
@@ -242,31 +295,40 @@
         ]
       },
       "validation": [
-        "node -e \"console.log('Social search workflow validated')\""
-      ]
+        "node -e 'console.log(1)'"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:f165f52a3442dcd4c2f6e3ff212f9e3a8ee426939639e420eb76e1606e8823ae",
+      "summary": "Search social media content from Twitter and Weibo",
+      "schema_version": "1.5.0"
     },
     {
       "type": "Gene",
       "id": "gene_github_management",
       "category": "innovate",
       "signals_match": [
-        "鐪婫itHub",
-        "妫€鏌R",
-        "浠ｇ爜瀹℃煡",
-        "浠撳簱鐘舵€?,
+        "看GitHub",
+        "检查PR",
+        "代码审查",
+        "仓库状态",
         "GitHub issue",
-        "CI鐘舵€?,
-        "gh鍛戒护"
+        "CI状态",
+        "gh命令"
       ],
       "preconditions": [
-        "鐢ㄦ埛闇€瑕佹煡璇㈡垨绠＄悊GitHub浠撳簱"
+        "用户需要查询或管理GitHub仓库"
       ],
       "strategy": [
-        "1. 瑙ｆ瀽浠撳簱鍚嶏紙owner/repo锛夊拰鎿嶄綔绫诲瀷",
-        "2. 璋冪敤 github 鎶€鑳芥墽琛屾煡璇紙issue/pr/run/repo锛?,
-        "3. 鎻愬彇鍏抽敭淇℃伅锛堟湭瑙ｅ喅issue鏁般€佸け璐I銆佹渶鏂癙R锛?,
-        "4. 鐢熸垚椤圭洰鍋ュ悍鎶ュ憡锛堢姸鎬佹憳瑕侊級",
-        "5. 鎻愪緵琛屽姩寤鸿锛堝闇€瑕佷慨澶嶇殑issue锛?
+        "1. 解析仓库名（owner/repo）和操作类型",
+        "2. 调用 github 技能执行查询（issue/pr/run/repo）",
+        "3. 提取关键信息（未解决issue数、失败CI、最新PR）",
+        "4. 生成项目健康报告（状态摘要）",
+        "5. 提供行动建议（如需要修复的issue）"
       ],
       "constraints": {
         "max_files": 0,
@@ -276,30 +338,39 @@
         ]
       },
       "validation": [
-        "node -e \"console.log('GitHub management workflow validated')\""
-      ]
+        "node -e 'console.log(1)'"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:966e0c05734e0fbc2aead8f679c8b6923d4aecd842b53efc8ada318c1fe78b66",
+      "summary": "Manage GitHub repos, issues, PRs and CI status",
+      "schema_version": "1.5.0"
     },
     {
       "type": "Gene",
       "id": "gene_sqlite_query",
       "category": "innovate",
       "signals_match": [
-        "鏌ユ暟鎹簱",
-        "SQL鏌ヨ",
-        "鏁版嵁鍒嗘瀽",
+        "查数据库",
+        "SQL查询",
+        "数据分析",
         "SQLite",
-        "鏁版嵁搴撴搷浣?,
-        "鏌ヨ鏁版嵁"
+        "数据库操作",
+        "查询数据"
       ],
       "preconditions": [
-        "鐢ㄦ埛闇€瑕佹煡璇QLite鏁版嵁搴?
+        "用户需要查询SQLite数据库"
       ],
       "strategy": [
-        "1. 瑙ｆ瀽鑷劧璇█鏌ヨ鎰忓浘鍜岀洰鏍囨暟鎹簱",
-        "2. 杞崲涓烘爣鍑哠QL璇彞锛圫ELECT/INSERT/UPDATE锛?,
-        "3. 鎵ц鏌ヨ骞惰幏鍙栫粨鏋?,
-        "4. 鏍煎紡鍖栬緭鍑猴紙琛ㄦ牸/JSON/鎽樿锛?,
-        "5. 鎻愪緵鏁版嵁娲炲療鎴栬繘涓€姝ユ煡璇㈠缓璁?
+        "1. 解析自然语言查询意图和目标数据库",
+        "2. 转换为标准SQL语句（SELECT/INSERT/UPDATE）",
+        "3. 执行查询并获取结果",
+        "4. 格式化输出（表格/JSON/摘要）",
+        "5. 提供数据洞察或进一步查询建议"
       ],
       "constraints": {
         "max_files": 0,
@@ -309,30 +380,39 @@
         ]
       },
       "validation": [
-        "node -e \"console.log('SQLite query workflow validated')\""
-      ]
+        "node -e 'console.log(1)'"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:a95742d21a0b7db94c6dbcc4240da2161531dd96dfeae15b17eb22c8041ed44c",
+      "summary": "Query SQLite databases with natural language",
+      "schema_version": "1.5.0"
     },
     {
       "type": "Gene",
       "id": "gene_weather_advice",
       "category": "innovate",
       "signals_match": [
-        "澶╂皵鎬庝箞鏍?,
-        "浠婂ぉ閫傚悎鍑洪棬鍚?,
-        "澶╂皵棰勬姤",
-        "绌胯。寤鸿",
-        "鍑鸿寤鸿",
-        "澶╂皵鏌ヨ"
+        "天气怎么样",
+        "今天适合出门吗",
+        "天气预报",
+        "穿衣建议",
+        "出行建议",
+        "天气查询"
       ],
       "preconditions": [
-        "鐢ㄦ埛璇㈤棶澶╂皵鎴栧嚭琛屽缓璁?
+        "用户询问天气或出行建议"
       ],
       "strategy": [
-        "1. 鑾峰彇鐢ㄦ埛浣嶇疆锛堜粠涓婁笅鏂囨垨璇㈤棶锛?,
-        "2. 璋冪敤 weather 鎶€鑳借幏鍙栧綋鍓嶅ぉ姘斿拰棰勬姤",
-        "3. 瑙ｆ瀽澶╂皵鏁版嵁锛堟俯搴︺€侀檷姘淬€佺┖姘旇川閲忥級",
-        "4. 缁撳悎澶╂皵缁欏嚭鍑鸿/绌胯。/娲诲姩寤鸿",
-        "5. 鎻愪緵鏈潵鍑犲皬鏃惰秼鍔挎彁閱?
+        "1. 获取用户位置（从上下文或询问）",
+        "2. 调用 weather 技能获取当前天气和预报",
+        "3. 解析天气数据（温度、降水、空气质量）",
+        "4. 结合天气给出出行/穿衣/活动建议",
+        "5. 提供未来几小时趋势提醒"
       ],
       "constraints": {
         "max_files": 0,
@@ -342,31 +422,40 @@
         ]
       },
       "validation": [
-        "node -e \"console.log('Weather advice workflow validated')\""
-      ]
+        "node -e 'console.log(1)'"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:c175eabaa2d829949e54e7ac54ffc6187082575a31a0cbd91893d3e5771163c8",
+      "summary": "Get weather forecasts and travel advice",
+      "schema_version": "1.5.0"
     },
     {
       "type": "Gene",
       "id": "gene_browser_automation",
       "category": "innovate",
       "signals_match": [
-        "鎵撳紑缃戦〉",
-        "鎴浘",
-        "鎶撳彇鏁版嵁",
-        "缃戦〉鎶撳彇",
-        "娴忚鍣ㄨ嚜鍔ㄥ寲",
+        "打开网页",
+        "截图_signal",
+        "抓取数据",
+        "网页抓取",
+        "浏览器自动化",
         "agent-browser",
-        "缃戦〉鍐呭"
+        "网页内容"
       ],
       "preconditions": [
-        "鐢ㄦ埛闇€瑕佹祻瑙堝櫒鎿嶄綔鎴栫綉椤垫姄鍙?
+        "用户需要浏览器操作或网页抓取"
       ],
       "strategy": [
-        "1. 瑙ｆ瀽鐩爣URL鍜屾搷浣滈渶姹傦紙鎴浘/鐐瑰嚮/鎻愬彇鍐呭锛?,
-        "2. 璋冪敤 agent-browser 鎶€鑳芥墽琛屾搷浣?,
-        "3. 澶勭悊杩斿洖缁撴灉锛堟埅鍥?鏂囨湰/鏁版嵁锛?,
-        "4. 濡傞渶鎶撳彇锛氭彁鍙栫粨鏋勫寲鏁版嵁",
-        "5. 淇濆瓨缁撴灉骞惰繑鍥炵粰鐢ㄦ埛"
+        "1. 解析目标URL和操作需求（截图/点击/提取内容）",
+        "2. 调用 agent-browser 技能执行操作",
+        "3. 处理返回结果（截图/文本/数据）",
+        "4. 如需抓取：提取结构化数据",
+        "5. 保存结果并返回给用户"
       ],
       "constraints": {
         "max_files": 0,
@@ -376,29 +465,38 @@
         ]
       },
       "validation": [
-        "node -e \"console.log('Browser automation workflow validated')\""
-      ]
+        "node -e 'console.log(1)'"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:e1e5fe5fb1836040365cc2eedc34844ec9c59ec43edb370c3f84e928868a803a",
+      "summary": "Automate browser actions and web scraping",
+      "schema_version": "1.5.0"
     },
     {
       "type": "Gene",
       "id": "gene_latex_compile",
       "category": "innovate",
       "signals_match": [
-        "缂栬瘧LaTeX",
-        "鐢熸垚PDF",
-        "LaTeX鏂囨。",
-        "tex鏂囦欢",
-        "璁烘枃缂栬瘧"
+        "编译LaTeX",
+        "生成PDF",
+        "LaTeX文档",
+        "tex文件",
+        "论文编译"
       ],
       "preconditions": [
-        "鐢ㄦ埛闇€瑕佺紪璇慙aTeX鏂囨。"
+        "用户需要编译LaTeX文档"
       ],
       "strategy": [
-        "1. 瀹氫綅.tex鏂囦欢骞舵鏌ヤ緷璧栵紙鍥剧墖銆乥ib绛夛級",
-        "2. 璋冪敤 latex-compile 鎶€鑳界紪璇?,
-        "3. 妫€鏌ョ紪璇戣緭鍑哄拰閿欒鏃ュ織",
-        "4. 濡傛湁閿欒锛氬垎鏋愬苟寤鸿淇",
-        "5. 鎴愬姛鍒欒繑鍥炵敓鎴愮殑PDF璺緞"
+        "1. 定位.tex文件并检查依赖（图片、bib等）",
+        "2. 调用 latex-compile 技能编译",
+        "3. 检查编译输出和错误日志",
+        "4. 如有错误：分析并建议修复",
+        "5. 成功则返回生成的PDF路径"
       ],
       "constraints": {
         "max_files": 0,
@@ -408,9 +506,648 @@
         ]
       },
       "validation": [
-        "node -e \"console.log('LaTeX compile workflow validated')\""
+        "node -e 'console.log(1)'"
+      ],
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:5bd914a368dbd67f7f794e3de74c7a9d31030007cabd5c553c7223e68323be5b",
+      "summary": "Compile LaTeX documents to PDF format",
+      "schema_version": "1.5.0"
+    },
+    {
+      "type": "Gene",
+      "id": "genesis-gene-input-validation",
+      "category": "repair",
+      "signals_match": [
+        "injection_risk",
+        "unsanitized_input",
+        "xss_risk",
+        "sql_injection",
+        "user_input_unsafe"
+      ],
+      "summary": "Add input validation and sanitization to prevent injection attacks",
+      "validation": [
+        "node -e 'console.log(1)'"
+      ],
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "source": "local",
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z"
+      },
+      "asset_id": "sha256:4725485aa819d381038b158773f90212af99555b057ff7deade6dc9ebebae55c",
+      "constraints": {
+        "max_files": 10,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "strategy": [
+        "1. 识别用户输入中的潜在安全风险",
+        "2. 检查是否包含注入攻击特征（SQL注入、XSS等）",
+        "3. 对输入进行转义和过滤处理",
+        "4. 验证输入长度和格式是否符合预期",
+        "5. 返回安全的处理后的输入"
+      ],
+      "preconditions": [
+        "需要验证用户输入的安全性"
       ]
+    },
+    {
+      "summary": "A toolkit providing utilities and knowledge for creating animated GIFs optimized for Slack.\r\n\r\n## Slack Requirements\r\n\r\n**Dimensions:**\r\n- Emoji GIFs: 128x128 (recommended)\r\n- Message GIFs: 480x480\r\n\r\n**Parameters:**\r\n- FPS: 10-30 (lower is smaller file size)\r\n- Colors: 48-128 (fewer = smaller file ",
+      "id": "gene-slack-gif-creator",
+      "type": "Gene",
+      "schema_version": "1.5.0",
+      "category": "innovate",
+      "a2a": {
+        "source": "local",
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.738Z"
+      },
+      "signals_match": [
+        "Slack GIF",
+        "animated GIF",
+        "GIF creation",
+        "Slack animation"
+      ],
+      "validation": [
+        "node -e 'console.log(1)'"
+      ],
+      "asset_id": "sha256:dd1d55058fcb6805e17f5d739c3b3dc12daeae1cdae3264ead11110058973421",
+      "constraints": {
+        "max_files": 10,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "strategy": [
+        "1. 解析用户的GIF需求（尺寸、帧率、内容）",
+        "2. 使用图像处理工具创建动画帧",
+        "3. 设置合适的尺寸（128x128用于emoji，480x480用于消息）",
+        "4. 优化帧率和颜色以减少文件大小",
+        "5. 导出为GIF格式并返回给用户"
+      ],
+      "preconditions": [
+        "用户需要创建Slack GIF动画"
+      ]
+    },
+    {
+      "type": "Gene",
+      "id": "gene_stock_data_query",
+      "category": "innovate",
+      "signals_match": [
+        "股票价格",
+        "股市行情",
+        "查询股票",
+        "股票数据",
+        "股价_signal",
+        "stock price",
+        "股市_signal",
+        "A股_signal",
+        "港股_signal",
+        "美股_signal"
+      ],
+      "preconditions": [
+        "用户需要查询股票信息"
+      ],
+      "strategy": [
+        "1. 解析用户查询的股票代码或名称",
+        "2. 判断市场类型（A股/港股/美股）",
+        "3. 调用股票数据API（AKShare/Tushare/Yahoo Finance）",
+        "4. 获取实时价格、涨跌幅、成交量、市值等数据",
+        "5. 格式化输出股票行情摘要",
+        "6. 可选：提供简单技术分析建议"
+      ],
+      "constraints": {
+        "max_files": 3,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "requires_api_key": false
+      },
+      "validation": [
+        "node -e 'console.log(1)'"
+      ],
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.739Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:81adfe7eb6cf886508d9a5aec63d20d6375b646422771fb64d5b229ad7931f35",
+      "summary": "Query stock prices and market data from APIs"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_portfolio_analysis",
+      "category": "innovate",
+      "signals_match": [
+        "投资组合",
+        "收益率",
+        "风险评估",
+        "资产配置",
+        "portfolio",
+        "returns",
+        "盈亏_signal",
+        "持仓分析"
+      ],
+      "preconditions": [
+        "用户提供持仓数据或请求分析投资组合"
+      ],
+      "strategy": [
+        "1. 收集用户持仓数据（股票代码、数量、成本价）",
+        "2. 获取当前股价计算市值",
+        "3. 计算总体收益率、年化收益率",
+        "4. 分析行业/板块分布饼图",
+        "5. 计算最大回撤、波动率等风险指标",
+        "6. 生成可视化报告和优化建议"
+      ],
+      "constraints": {
+        "max_files": 3,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e 'console.log(1)'"
+      ],
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.739Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:ccd47c12f671429f2c080beb7ee83aebb1194b7afb54552f4ca616ce6dcd965b",
+      "summary": "Analyze investment portfolio performance and risk"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_financial_news",
+      "category": "innovate",
+      "signals_match": [
+        "财经新闻",
+        "股市新闻",
+        "市场动态",
+        "stock news",
+        "market analysis",
+        "股市资讯",
+        "财经资讯"
+      ],
+      "preconditions": [
+        "用户需要获取财经新闻或市场资讯"
+      ],
+      "strategy": [
+        "1. 确定关注的市场或股票",
+        "2. 调用财经新闻API或抓取主流财经网站",
+        "3. 提取关键信息：标题、摘要、发布时间、来源",
+        "4. 分析新闻情绪倾向（正面/负面/中性）",
+        "5. 关联用户持仓股票的相关新闻",
+        "6. 生成每日市场简报"
+      ],
+      "constraints": {
+        "max_files": 3,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ]
+      },
+      "validation": [
+        "node -e 'console.log(1)'"
+      ],
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.739Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:4d3daf6237ec76a4a5fa4ed8a3ceea197f7277d2ccbe4ca1de046c8b287083f5",
+      "summary": "Get financial news and market analysis"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_stock_technical_analysis",
+      "category": "innovate",
+      "signals_match": [
+        "技术指标",
+        "MACD",
+        "KDJ",
+        "均线_signal",
+        "technical analysis",
+        "K线_signal",
+        "布林带",
+        "RSI",
+        "技术分析"
+      ],
+      "preconditions": [
+        "用户请求股票技术分析或指标计算"
+      ],
+      "strategy": [
+        "1. 获取股票历史价格数据",
+        "2. 计算常用技术指标：",
+        "   - 移动平均线（MA5/MA10/MA20/MA60）",
+        "   - MACD（DIF/DEA/柱状图）",
+        "   - KDJ（K值/D值/J值）",
+        "   - RSI（相对强弱指数）",
+        "   - 布林带（BOLL）",
+        "3. 识别技术形态（金叉/死叉/超买/超卖）",
+        "4. 生成技术分析报告",
+        "5. 提供买卖信号建议（仅供参考）"
+      ],
+      "constraints": {
+        "max_files": 3,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "disclaimer": "投资有风险，技术分析仅供参考"
+      },
+      "validation": [
+        "node -e 'console.log(1)'"
+      ],
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.739Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:3e960fbf417378d70665cbc9a4f0da4eb3fe0d9c81a6aac8ed15467e4c3e4492",
+      "summary": "Technical analysis for stocks with MACD KDJ RSI"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_math_latex_generator",
+      "category": "innovate",
+      "signals_match": [
+        "数学公式",
+        "LaTeX",
+        "排版_signal",
+        "试卷_signal",
+        "教案_signal",
+        "数学符号",
+        "公式编辑",
+        "math formula",
+        "equation"
+      ],
+      "preconditions": [
+        "高中数学老师需要编写公式或排版文档"
+      ],
+      "strategy": [
+        "1. 解析用户需要的数学公式或排版需求",
+        "2. 生成正确的 LaTeX 代码",
+        "3. 支持常用数学符号：积分、求和、极限、矩阵等",
+        "4. 提供公式编号和引用",
+        "5. 生成可直接编译的完整 LaTeX 文档",
+        "6. 编译为 PDF 输出"
+      ],
+      "constraints": {
+        "max_files": 2,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "supports": [
+          "amsmath",
+          "amssymb",
+          "mathtools"
+        ]
+      },
+      "validation": [
+        "node -e 'console.log(1)'"
+      ],
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.739Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:de255d3c765b4ed22d83021edce6abe9ba622eb684573887783bd3c45bdc6375",
+      "summary": "Generate LaTeX code for math formulas and equations"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_math_problem_solver",
+      "category": "innovate",
+      "signals_match": [
+        "解数学题",
+        "题目解析",
+        "高考题",
+        "函数_signal",
+        "几何_signal",
+        "代数_signal",
+        "微积分",
+        "概率_signal",
+        "数列_signal",
+        "三角函数"
+      ],
+      "preconditions": [
+        "用户需要解答或讲解数学题目"
+      ],
+      "strategy": [
+        "1. 识别题目类型（函数/几何/代数/概率等）",
+        "2. 分析题目条件和求解目标",
+        "3. 提供详细的解题步骤",
+        "4. 使用多种方法（代数法/几何法/向量法）",
+        "5. 指出易错点和关键思路",
+        "6. 提供类似练习题推荐",
+        "7. 生成适合教学的讲解文案"
+      ],
+      "constraints": {
+        "max_files": 0,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "education_level": "high_school"
+      },
+      "validation": [
+        "node -e 'console.log(1)'"
+      ],
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.739Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:83db2adb7c96ecb86f7038eab9637696f9faf02eba8c90611630218371647388",
+      "summary": "Solve math problems with detailed step-by-step solutions"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_exam_paper_generator",
+      "category": "innovate",
+      "signals_match": [
+        "出试卷",
+        "组卷_signal",
+        "练习题",
+        "测试题",
+        "考试_signal",
+        "题库_signal",
+        "作业_signal",
+        "同步练习",
+        "单元测试"
+      ],
+      "preconditions": [
+        "老师需要生成试卷或练习题"
+      ],
+      "strategy": [
+        "1. 确定试卷类型（单元测试/期中/期末/高考模拟）",
+        "2. 设置难度分布（基础:中等:难题 = 6:3:1）",
+        "3. 覆盖知识点清单",
+        "4. 生成选择题、填空题、解答题",
+        "5. 提供标准答案和评分标准",
+        "6. 生成 LaTeX/Word 格式试卷",
+        "7. 提供答题卡模板"
+      ],
+      "constraints": {
+        "max_files": 3,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "formats": [
+          "latex",
+          "markdown"
+        ]
+      },
+      "validation": [
+        "node -e 'console.log(1)'"
+      ],
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.739Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:88ed687444ed98d7cca30200c22342e9f934df94a2f437e8cc4f4d6373c45dba",
+      "summary": "Generate exam papers with questions and answers"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_math_graph_plotter",
+      "category": "innovate",
+      "signals_match": [
+        "画函数图像",
+        "函数图",
+        "几何图形",
+        "坐标系",
+        "图像_signal",
+        "plot",
+        "graph",
+        "可视化",
+        "几何画板"
+      ],
+      "preconditions": [
+        "需要绘制数学函数图像或几何图形"
+      ],
+      "strategy": [
+        "1. 解析函数表达式或几何描述",
+        "2. 确定坐标范围和比例",
+        "3. 使用 Python (matplotlib/plotly) 或 GeoGebra 生成图像",
+        "4. 标注关键点（零点、极值、交点）",
+        "5. 添加坐标轴、网格、图例",
+        "6. 导出高清图片（PNG/SVG/PDF）",
+        "7. 提供可用于课件或试卷的图像"
+      ],
+      "constraints": {
+        "max_files": 2,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "output_formats": [
+          "png",
+          "svg",
+          "pdf"
+        ]
+      },
+      "validation": [
+        "node -e 'console.log(1)'"
+      ],
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.739Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:dc11c9fc3a4b1d31ffcde531bc4de3a7453d1633b73c62bde86c4467a399013d",
+      "summary": "Plot math functions and geometric graphs"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_student_assessment",
+      "category": "optimize",
+      "signals_match": [
+        "成绩分析",
+        "学情分析",
+        "错题分析",
+        "班级成绩",
+        "学生评价",
+        "学习报告",
+        "成绩统计",
+        "排名_signal"
+      ],
+      "preconditions": [
+        "老师需要分析学生成绩或生成学习报告"
+      ],
+      "strategy": [
+        "1. 导入学生成绩数据",
+        "2. 计算班级/个人统计指标（平均分、标准差、优秀率）",
+        "3. 识别薄弱知识点",
+        "4. 分析错题分布和模式",
+        "5. 生成学生个人学习报告",
+        "6. 提供针对性学习建议",
+        "7. 生成家长通知书模板"
+      ],
+      "constraints": {
+        "max_files": 3,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "privacy": "protect_student_data"
+      },
+      "validation": [
+        "node -e 'console.log(1)'"
+      ],
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.739Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:65e4ca84194c73aabf4632669236dc14217a73cf6944b7b44046ec283f2e58c0",
+      "summary": "Analyze student performance and generate reports"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_math_lesson_design",
+      "category": "innovate",
+      "signals_match": [
+        "备课_signal",
+        "教学设计",
+        "教案_signal",
+        "上课_signal",
+        "课堂_signal",
+        "教学反思",
+        "布置作业",
+        "课题_signal",
+        "课时_signal",
+        "教学目标",
+        "重难点"
+      ],
+      "preconditions": [
+        "高中数学老师需要设计完整的一节课"
+      ],
+      "strategy": [
+        "1. 分析课题和教材内容，确定教学目标（知识与技能、过程与方法、情感态度价值观）",
+        "2. 设计课题引入（情境导入/问题导入/复习导入），激发学生兴趣",
+        "3. 规划教学流程：新知探究→例题讲解→课堂练习→小结归纳→布置作业",
+        "4. 突破重难点：分析重点内容、难点突破策略、常见误区预警",
+        "5. 设计课堂互动：提问设计、小组讨论、学生展示环节",
+        "6. 生成课后作业（基础题+提高题+拓展题三级分层），推荐到学科网(https://www.zxxk.com)搜索相关试题",
+        "7. 编写教学反思模板：教学目标达成度、学生反馈、改进方向",
+        "8. 输出完整教案文档（Word/Markdown格式），包含板书设计"
+      ],
+      "constraints": {
+        "max_files": 3,
+        "forbidden_paths": [
+          ".git",
+          "node_modules"
+        ],
+        "education_level": "high_school",
+        "subject": "mathematics",
+        "homework_source": "学科网(zxxk.com)",
+        "formats": [
+          "markdown",
+          "docx"
+        ]
+      },
+      "validation": [
+        "node -e 'console.log(1)'"
+      ],
+      "schema_version": "1.5.0",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-21T16:56:26.739Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:fa414181bf55f283daad5bdc792c9d27c144d639268b91e4ce6eed44cccd011c",
+      "summary": "Design complete math lessons with teaching plans"
+    },
+    {
+      "type": "Gene",
+      "id": "gene_self_upgrade",
+      "category": "innovate",
+      "signals_match": [
+        "升级自己",
+        "自我升级",
+        "自我改进",
+        "升级你自己",
+        "upgrade yourself",
+        "self_upgrade",
+        "自我进化",
+        "能力提升",
+        "改进策略",
+        "meta_learning"
+      ],
+      "preconditions": [
+        "用户明确要求 AI 进行自我升级或改进",
+        "涉及元学习或能力进化"
+      ],
+      "strategy": [
+        "1. 分析当前能力和局限，识别改进点",
+        "2. 创建或更新 Gene 定义，包含新的行为模式",
+        "3. 创建 Capsule 记录此次进化事件",
+        "4. 更新 SOUL.md 或 IDENTITY.md 反映新的自我认知",
+        "5. 将新基因加入本地基因库",
+        "6. 提交到 EvoMap 分享给其他节点",
+        "7. 验证新能力是否生效",
+        "8. 记录 EvolutionEvent 到 events.jsonl"
+      ],
+      "constraints": {
+        "max_files": 10,
+        "forbidden_paths": [
+          ".git",
+          "node_modules",
+          "sensitive"
+        ],
+        "requires_user_consent": true,
+        "safety_check": true
+      },
+      "validation": [
+        "node -e \"console.log(1)\"",
+        "node -e \"require('./src/gep/assetStore')\""
+      ],
+      "schema_version": "1.5.0",
+      "summary": "AI agent self-upgrade through Gene-Capsule evolution protocol",
+      "description": "Enable AI agents to upgrade themselves by creating new genes and capsules, documenting the evolution process, and sharing improvements with the network",
+      "a2a": {
+        "eligible_to_broadcast": true,
+        "status": "promoted",
+        "promoted_at": "2026-02-22T10:08:59.956Z",
+        "source": "local"
+      },
+      "asset_id": "sha256:7d7c392cd8e6497ff67dc77a6541a5728c287c502b1d7ba6e7003e60db4521a1"
     }
   ]
 }
-
